@@ -12,7 +12,7 @@ interface IInitialState {
 }
 
 
-const radioBtn = [
+const preOrderUpdates = [
   {
     label: "Email+Sms",
     value: "Email+Sms",
@@ -70,11 +70,11 @@ const Details = () => {
       <div>
         <h1>working</h1>
       </div>
-      {radioBtn.map((e) => {
+      {preOrderUpdates.map((e) => {
         return (
           <Radio
             key={e.value}
-            name="radiobtn"
+            name="updates"
             label={e.label}
             value={e.value}
             disabled={false}
