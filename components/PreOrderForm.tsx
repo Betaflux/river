@@ -67,14 +67,11 @@ const Details = () => {
       >
         Pay Rs. 2500 to Preorder
       </Button>
-      <div>
-        <h1>working</h1>
-      </div>
       {preOrderUpdates.map((e) => {
         return (
           <Radio
             key={e.value}
-            name="updates"
+            name="preOrderUpdates"
             label={e.label}
             value={e.value}
             disabled={false}
