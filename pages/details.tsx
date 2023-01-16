@@ -1,4 +1,5 @@
-import Details from "../components/Details";
+import Details from "../components/PreOrderForm";
+
 
 const DetailsPage = () => {
   return <Details />;
