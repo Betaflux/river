@@ -2,15 +2,16 @@ import React, { Dispatch, SetStateAction, useState } from "react";
 import Button from "../commonComponents/Button";
 import Input from "../commonComponents/Input";
 import Radio from "../commonComponents/Radio";
-
+import { BackgroundColor, HoverBackgroundColor, HoverTextColor, Size, TextColor, Variant } from "../utils/commonFunctions/commonTypes/commonTypes";
 
 import handleValidation from "../utils/commonFunctions/validation";
+import Footer from "./Footer";
+import Header from "./Header";
 
 interface IInitialState {
   value: string;
   error: string;
 }
-
 
 const preOrderUpdates = [
   {
@@ -41,7 +42,8 @@ const Details = () => {
     setValue({ value, error });
   };
   return (
-    <div>
+    <div className="bg-blue-86">
+      <Header />
       <Input
         name="email"
         type="email"
@@ -59,13 +61,18 @@ const Details = () => {
         handleChange={(e) => handleChange(e, "phone", setPhone)}
       />
       <Button
-        variant="secondary"
+        variant={Variant.primary}
+        size={Size.medium}
         disabled={false}
+        backGroundColor={BackgroundColor["yellow-86"]}
+        color={TextColor["blue-19"]}
+        hoverTextColor={HoverTextColor["yellow-19"]}
+        hoverBackgroundColor={HoverBackgroundColor["blue-19"]}
         handleClick={() => {
           console.log("working");
         }}
       >
-        Pay Rs. 2500 to Preorder
+        Preorder Indie Online
       </Button>
       {preOrderUpdates.map((e) => {
         return (
@@ -80,6 +87,7 @@ const Details = () => {
           />
         );
       })}
+      <Footer />
     </div>
   );
 };
