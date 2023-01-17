@@ -1,3 +1,107 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+  font-family: "manukaThin";
+  src: url("../public/fonts/Manuka/ManukaCondensed-Thin.otf");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "manukaBold";
+  src: url("../public/fonts/Manuka/ManukaCondensed-Bold.otf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "manukaUltra";
+  src: url("../public/fonts/Manuka/ManukaCondensed-Ultra.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sohneBuch";
+  src: url("../public/fonts/sohne/Söhne-Buch.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sohneBuchKursiv";
+  src: url("../public/fonts/sohne/Söhne-BuchKursiv.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sohneExtrafett";
+  src: url("../public/fonts/sohne/Söhne-Extrafett.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sohneExtrafettKursiv";
+  src: url("../public/fonts/sohne/Söhne-ExtrafettKursiv.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sohneExtraleicht";
+  src: url("../public/fonts/sohne/Söhne-Extraleicht.otf");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sohneExtraleichtKursiv";
+  src: url("../public/fonts/sohne/Söhne-ExtraleichtKursiv.otf");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sohneHalbfett";
+  src: url("../public/fonts/sohne/Söhne-Halbfett.otf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sohneHalbfettKursiv";
+  src: url("../public/fonts/sohne/Söhne-HalbfettKursiv.otf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sohneBreitBuch";
+  src: url("../public/fonts/sohneBreit/SöhneBreit-Buch.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sohneBreitBuchKursiv";
+  src: url("../public/fonts/sohneBreit/SöhneBreit-BuchKursiv.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sohneBreitDreiviertelfett";
+  src: url("../public/fonts/sohneBreit/SöhneBreit-Dreiviertelfett.otf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sohneBreitDreiviertelfettKursiv";
+  src: url("../public/fonts/sohneBreit/SöhneBreit-DreiviertelfettKursiv.otf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sohneBreitExtrafett";
+  src: url("../public/fonts/sohneBreit/SöhneBreit-Extrafett.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sohneBreitExtrafettKursiv";
+  src: url("../public/fonts/sohneBreit/SöhneBreit-ExtrafettKursiv.otf");
+  font-weight: 900;
+  font-style: normal;
+}
