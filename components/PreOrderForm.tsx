@@ -75,9 +75,10 @@ const Details = () => {
       >
         Preorder Indie Online
       </Button>
-      {preOrderUpdates.map((e, i) => {
+      {preOrderUpdates.map((e) => {
         return (
           <Accordion
+            key={`${e.label}`}
             title={e.label}
             desc={e.value}
             color="text-green-700"

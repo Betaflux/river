@@ -1,5 +1,4 @@
 /* eslint-disable react/jsx-boolean-value */
-import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
