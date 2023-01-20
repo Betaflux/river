@@ -1,6 +1,6 @@
 import React from "react";
 
-interface IAccordion {
+export interface IAccordion {
   title: string;
   desc: string;
   color: string;
