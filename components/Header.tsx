@@ -71,7 +71,7 @@ const Header = () => {
                 variant={Variant.primary}
                 size={Size.small}
                 disabled={false}
-                backGroundColor={BackgroundColor["red-86"]}
+                backGroundColor={BackgroundColor["blue-19"]}
                 color={TextColor["blue-86"]}
                 handleClick={() => {
                   router.push("/preorder");

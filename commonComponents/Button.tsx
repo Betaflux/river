@@ -52,7 +52,7 @@ const getbuttonType = (
   const buttonType: IButtonStyle = {
     secondaryDark: `border-3 ${color} ${borderColor} ${hoverBackgroundColor} ${hoverTextColor} rounded-4xl`,
     secondaryLight: `border-3 ${color} ${borderColor} ${hoverBackgroundColor} ${hoverTextColor}  rounded-4xl`,
-    primary: `bg-yellow-86 ${backGroundColor} ${color} rounded-4xl ${hoverBackgroundColor} ${hoverTextColor}`,
+    primary: `${backGroundColor} ${color} rounded-4xl ${hoverBackgroundColor} ${hoverTextColor}`,
   };
   return buttonType[variant as keyof IButtonStyle];
 };

@@ -4,6 +4,7 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
     "./commonComponents/**/*.{js,ts,jsx,tsx}",
+    "./utils/**/*.{js,ts,jsx,tsx}",
   ],
   important: true,
   theme: {
@@ -38,7 +39,7 @@ module.exports = {
         "4xl": "3.125rem",
       },
       borderWidth: {
-        1:"1px",
+        1: "1px",
         3: "3px",
       },
       fontSize: {
