@@ -38,6 +38,7 @@ module.exports = {
         "4xl": "3.125rem",
       },
       borderWidth: {
+        1:"1px",
         3: "3px",
       },
       fontSize: {

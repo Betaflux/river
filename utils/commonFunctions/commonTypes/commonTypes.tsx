@@ -1,6 +1,6 @@
 export enum Variant {
   primary = "primary",
-  secondaryDark = "primaryDark",
+  secondaryDark = "secondaryDark",
   secondaryLight = "secondaryLight",
 }
 export enum BackgroundColor {
@@ -118,4 +118,5 @@ export enum HoverTextColor {
 export enum Size {
   small = "small",
   medium = "medium",
+  large="large"
 }

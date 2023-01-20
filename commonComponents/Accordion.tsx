@@ -1,6 +1,6 @@
 import React, {  useRef, useState } from "react";
 
-interface IAccordion {
+export interface IAccordion {
   title: string;
   desc: string;
   color:string;
@@ -23,7 +23,7 @@ const Accordion = ({ title, desc, color }: IAccordion) => {
             {title}
           </div>
         </div>
-        <div className="flex items-start">
+        <div className="flex">
           <button
             type="button"
             onClick={HandleOpening}

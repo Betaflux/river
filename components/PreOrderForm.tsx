@@ -61,7 +61,7 @@ const Details = () => {
         handleChange={(e) => handleChange(e, "phone", setPhone)}
       />
       <Button
-        variant={Variant.primary}
+        variant={Variant.secondaryDark}
         size={Size.medium}
         disabled={false}
         backGroundColor={BackgroundColor["yellow-86"]}

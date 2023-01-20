@@ -26,6 +26,7 @@ interface IButtonStyle {
 interface IButtonSize {
   small: string;
   medium: string;
+  large:string;
 }
 const buttonStyle: string = ctl(`leadeing-[25px]
 outline-none
@@ -35,7 +36,8 @@ text-10xl sm:text-11xl
 
 const buttonSize: IButtonSize = {
   small: `min-w-[60px]  py-[18px] px-[37.5px] sm:py-[20px]`,
-  medium: `min-w-[280px]  py-[18px] px-[37.5px] sm:py-[24px]`,
+  medium: `min-w-[280px]  py-[18px] px-[37.5px] sm:px-[37.5px] sm:py-[24px]`,
+  large: `min-w-[280px]  py-[18px] px-[37.5] sm:px-[90px] sm:py-[20px]`,
 };
 const getbuttonType = (
   variant: string,
@@ -45,9 +47,11 @@ const getbuttonType = (
   hoverBackgroundColor: HoverBackgroundColor,
   borderColor:BorderColor
 ): string => {
+  console.log("backGroundColor",backGroundColor);
+
   const buttonType: IButtonStyle = {
-    secondaryDark: `border-3 ${borderColor} ${hoverBackgroundColor} ${hoverTextColor} rounded-4xl`,
-    secondaryLight: `border-3 ${borderColor} ${hoverBackgroundColor} ${hoverTextColor}  rounded-4xl`,
+    secondaryDark: `border-3 ${color} ${borderColor} ${hoverBackgroundColor} ${hoverTextColor} rounded-4xl`,
+    secondaryLight: `border-3 ${color} ${borderColor} ${hoverBackgroundColor} ${hoverTextColor}  rounded-4xl`,
     primary: `bg-yellow-86 ${backGroundColor} ${color} rounded-4xl ${hoverBackgroundColor} ${hoverTextColor}`,
   };
   return buttonType[variant as keyof IButtonStyle];
