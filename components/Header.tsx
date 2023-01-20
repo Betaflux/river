@@ -19,7 +19,7 @@ const navItems = [
 ];
 const Header = () => {
   const router = useRouter();
-  
+
   return (
     <nav className="w-full flex flex-col lg:flex-row items-center px-5 lg:py-10 lg:px-8">
       {/* -----left side------  */}
@@ -74,7 +74,7 @@ const Header = () => {
                 backGroundColor={BackgroundColor["red-86"]}
                 color={TextColor["blue-86"]}
                 handleClick={() => {
-                  console.log("working");
+                  router.push("/preorder");
                 }}
               >
                 Preorder Indie

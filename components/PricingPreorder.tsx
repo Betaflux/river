@@ -1,8 +1,10 @@
+import { useRouter } from 'next/router';
 import React from 'react'
 import Button from '../commonComponents/Button';
 import { BackgroundColor, HoverBackgroundColor, HoverTextColor, Size, TextColor, Variant } from '../utils/commonFunctions/commonTypes/commonTypes';
 
 const PricingPreorder = () => {
+  const router= useRouter();
   return (
     <section className="w-full py-[94px] px-5 flex flex-col lg:px-10 lg:flex-row lg:py-[188px]">
       {/* Title */}
@@ -24,7 +26,7 @@ const PricingPreorder = () => {
             hoverTextColor={HoverTextColor["yellow-86"]}
             hoverBackgroundColor={HoverBackgroundColor["blue-19"]}
             handleClick={() => {
-              console.log("working");
+               router.push("/preorder");
             }}
           >
             Preorder Indie Online
