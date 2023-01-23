@@ -186,9 +186,9 @@ const Footer = () => {
       {/* river logo */}
       <div className="w-full flex flex-col ">
         {/* river pvt ltd */}
-        <div className=" hidden lg:flex justify-end  font-sohneBuch text-red-98 text-12xl w-3/4 pt-[91px]">
-          © 2022 World of River Pvt. Ltd.
-        </div>
+          <div className=" hidden lg:flex justify-end  font-sohneBuch text-red-98 text-12xl w-3/4 pt-[91px] pr-10">
+            © 2022 World of River Pvt. Ltd.
+          </div>
         {/* river logo div */}
         <div className="w-full">
           <div className="hidden w-full lg:flex">
