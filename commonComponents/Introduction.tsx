@@ -11,11 +11,11 @@ const indeItems = [
 const Introduction = () => {
   return (
     <section className="w-full hidden lg:flex flex-col pt-[120px] px-10">
-      <div className="w-full uppercase font-manukaUltra text-14xl leading-14 text-blue-37 italic">
+      <div className="w-full uppercase font-manukaUltra text-14xl leading-14 text-blue-37 ">
         INTRODUCING
       </div>
       <div className="w-full flex flex-row">
-        <div className="w-1/2 uppercase font-manukaUltra text-14xl leading-14 text-blue-37 italic">
+        <div className="w-1/2 uppercase font-manukaUltra text-14xl leading-14 text-blue-37 ">
           INDIE
         </div>
         <div className="w-1/2 flex flex-row justify-between items-end">

@@ -9,7 +9,7 @@ const IndeDescription = () => {
     <section className="hidden w-full py-[94px] px-5 lg:flex  lg:px-10 lg:flex-row lg:py-[120px]">
       {/* Title */}
       <div
-        className="w-1/2 font-manukaBold italic
+        className="w-1/2 font-manukaBold 
            text-13xl leading-13 text-left text-blue-37 mb-[45px] lg:w-1/2 lg:mb-0"
       >
         <div className="w-3/4">

@@ -10,7 +10,7 @@ const Accessories = ({ accessoriesData, title }: IAccessories) => {
     <section className="w-full py-[94px] px-5 lg:py-[188px] lg:px-10">
       {/* Title */}
       <div
-        className="w-full font-manukaBold italic
+        className="w-full font-manukaBold 
            text-13xl leading-13 text-left text-blue-37 mb-[65px] lg:mb-[108px]"
       >
         {title}

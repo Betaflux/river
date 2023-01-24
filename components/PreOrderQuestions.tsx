@@ -16,7 +16,7 @@ const PreOrderQuestions = ({accordionData}:IPreOrderQuestions) => {
     <section className="w-full py-[94px] px-5 bg-blue-19 flex flex-col lg:px-10 lg:flex-row">
       {/* Title */}
       <div
-        className="w-full font-manukaBold italic
+        className="w-full font-manukaBold 
            text-13xl leading-13 text-left text-blue-86 mb-[65px] lg:w-1/2 lg:mb-0"
       >
         Frequently Asked Questions

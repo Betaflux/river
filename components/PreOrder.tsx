@@ -23,10 +23,10 @@ const PreOrder = () => {
       <Header />
       {/* preorder inde text */}
       <section className="w-full px-5 py-[61px] lg:px-10 lg:py-[67px]">
-        <div className="text-blue-37 font-manukaUltra uppercase italic text-13xl leading-13 lg:text-14xl lg:leading-14">
+        <div className="text-blue-37 font-manukaUltra uppercase  text-13xl leading-13 lg:text-14xl lg:leading-14">
           Preorder
         </div>
-        <div className="text-blue-37 font-manukaUltra uppercase italic text-13xl leading-13 lg:text-14xl lg:leading-14">
+        <div className="text-blue-37 font-manukaUltra uppercase  text-13xl leading-13 lg:text-14xl lg:leading-14">
           INDIE
         </div>
       </section>

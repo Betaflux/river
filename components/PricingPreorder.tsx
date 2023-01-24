@@ -9,7 +9,7 @@ const PricingPreorder = () => {
     <section className="w-full py-[94px] px-5 flex flex-col lg:px-10 lg:flex-row lg:py-[188px]">
       {/* Title */}
       <div
-        className="w-3/4 font-manukaBold italic
+        className="w-3/4 font-manukaBold 
            text-13xl leading-13 text-left text-blue-37 mb-[45px] lg:w-1/2 lg:mb-0"
       >
         Pricing & Preorder

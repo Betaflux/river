@@ -14,7 +14,7 @@ const Versatility = ({ claimCards }: IClaimCards) => {
     <section className="w-full py-[94px] px-5 bg-blue-86 lg:px-10 flex flex-col lg:flex-row lg:py-[188px]">
       {/* Title */}
       <div
-        className="w-full font-manukaBold italic
+        className="w-full font-manukaBold 
            text-13xl leading-13 text-left text-blue-37 mb-[65px] lg:w-1/3 lg:mb-0"
       >
         <div className="lg:hidden"> Versatility (Single-sentence-title)</div>

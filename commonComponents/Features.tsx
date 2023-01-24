@@ -23,7 +23,7 @@ const Features = ({feature,title,claimCards,accordionData,textColor,backgroundCo
     >
       {/* Title */}
       <div
-        className={`w-full font-manukaBold italic
+        className={`w-full font-manukaBold 
            text-13xl leading-13 text-left ${textColor} mb-[65px] lg:mb-0 lg:w-1/3`}
       >
         <div>{feature}</div>
