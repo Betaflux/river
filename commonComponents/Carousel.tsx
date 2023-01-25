@@ -1,13 +1,12 @@
-/* eslint-disable react/jsx-boolean-value */
-// Import Swiper React components
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Mousewheel } from "swiper";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-// import "./carousel.css";
+
 // import required modules
-import { Pagination, Mousewheel } from "swiper";
 import Image from "next/image";
 
 const products = [
@@ -27,32 +26,48 @@ const products = [
       "Caption of the image explaining how different people find livelihoods via River.",
   },
 ];
-
 const Carousel = () => {
   return (
-    <div className="">
+    <div className=" w-full lg:hidden">
       <Swiper
         direction="vertical"
-        slidesPerView={1}
-        spaceBetween={30}
+        // eslint-disable-next-line react/jsx-boolean-value
         mousewheel={true}
-        className="mySwiper"
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Mousewheel, Pagination]}
+        modules={[Mousewheel]}
+        className="mySwiper h-[600px]"
       >
-        {products.map((product) => {
+        {products.map((ele, ind) => {
           return (
             <SwiperSlide>
-              <div className="w-full h-fit">
-                <Image
-                  src={product.image}
-                  fill
-                  alt="riverProduct"
-                  className="object-cover  h-[474px] relative"
-                />
-                {/* <div className="w-full">{product.description}</div> */}
+              <Image
+                src={ele.image}
+                alt=""
+                width={320}
+                height={476}
+                className="w-full h-full"
+              />
+              <div className="flex flex-col items-center p-[22px] bg-blue-19 font-sohneBuch text-10xl leading-11 absolute bottom-[20px] ml-[20px] gap-2 text-blue-61">
+                <div>
+                  <Image
+                    src="/images/product/uparrow.svg"
+                    alt=""
+                    width={25}
+                    height={0}
+                  />
+                </div>
+                <div className="flex gap-1">
+                  <div>{ind + 1}</div>
+                  <div>/</div>
+                  <div>3</div>
+                </div>
+                <div>
+                  <Image
+                    src="/images/product/downarrow.svg"
+                    alt=""
+                    width={25}
+                    height={0}
+                  />
+                </div>
               </div>
             </SwiperSlide>
           );
@@ -61,4 +76,5 @@ const Carousel = () => {
     </div>
   );
 };
+
 export default Carousel;
