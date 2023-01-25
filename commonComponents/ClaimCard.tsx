@@ -10,25 +10,25 @@ export interface IClaimCard{
 }
 const ClaimCard = ({url,title,description,color=TextColor['blue-37']}:IClaimCard) => {
   return (
-    <div className="w-full">
+    <article className="w-full">
       {/* image */}
-      <div className="w-full h-[187px] bg-blue-37">
-        <Image src={url} fill alt="" className="relative w-full h-full" />
+      <div className="w-full">
+        <Image src={url} fill alt={title||""} className="relative w-full h-full" />
       </div>
       {/* contents */}
-      <div className="w-full mt-[13px]">
+      <div className="w-full mt-[13px] lg:mt-[29px]">
         <div
           className={`w-full ${color} font-sohneHalbfett text-10xl leading-11 lg:text-12xl lg:leading-12`}
         >
           {title}
         </div>
-        <div
+        <p
           className={`w-full ${color} font-sohneBuch text-10xl leading-11 lg:text-12xl lg:leading-12`}
         >
           {description}
-        </div>
+        </p>
       </div>
-    </div>
+    </article>
   );
 }
 
