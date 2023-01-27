@@ -12,6 +12,13 @@ interface IPreOrderQuestions {
 }
 const PreOrderQuestions = ({ accordionData }: IPreOrderQuestions) => {
   const [limit, setLimit] = useState<number>(3);
+  const [isOpen, setIsOpen] = useState<boolean[]>(new Array(5).fill(false));
+  const toggleHandler = (ind: any) => {
+    const newIsOpen = [...isOpen];
+    newIsOpen[ind] = !newIsOpen[ind];
+    setIsOpen(newIsOpen);
+  };
+
   return (
     <section className="w-full py-[94px] px-5 bg-blue-19 flex flex-col lg:py-[193px] lg:px-10 lg:flex-row">
       {/* Title */}
@@ -24,13 +31,16 @@ const PreOrderQuestions = ({ accordionData }: IPreOrderQuestions) => {
       {/* Cards */}
       <div className="w-full flex flex-col gap-[20px] lg:w-1/2">
         <div className="w-full grid grid-cols-1 lg:hidden">
-          {accordionData?.slice(0, limit).map((items) => {
+          {accordionData?.slice(0, limit).map((items, index) => {
             return (
               <div
                 key={items.title}
                 className="border-b-1 border-blue-86 pb-5 last:border-none"
               >
                 <Accordion
+                  itemIndex={index}
+                  isOpen={isOpen[index]}
+                  toggleHandler={toggleHandler}
                   title={items.title}
                   desc={items.desc}
                   color="text-blue-86"
@@ -41,13 +51,16 @@ const PreOrderQuestions = ({ accordionData }: IPreOrderQuestions) => {
         </div>
         {/* for desktop */}
         <div className="hidden  w-full lg:grid lg:grid-cols-1">
-          {accordionData?.map((items) => {
+          {accordionData?.map((items, index) => {
             return (
               <div
                 key={items.title}
                 className="border-b-1 border-blue-86 pb-5 last:border-none"
               >
                 <Accordion
+                  itemIndex={index}
+                  isOpen={isOpen[index]}
+                  toggleHandler={toggleHandler}
                   title={items.title}
                   desc={items.desc}
                   color="text-blue-86"
