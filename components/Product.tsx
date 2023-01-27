@@ -164,6 +164,7 @@ const Product = () => {
           <Image
             src="/images/product/desktopbanner.png"
             fill
+            quality={100}
             alt="headerLogo"
             className="relative w-full h-screen"
           />
@@ -172,6 +173,7 @@ const Product = () => {
           <Image
             src="/images/product/mobilebanner.png"
             fill
+            quality={100}
             alt="headerLogo"
             className="relative w-full h-full"
           />

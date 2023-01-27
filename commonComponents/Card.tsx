@@ -14,6 +14,7 @@ const Card = ({ title, paragraph, image }: ICard) => {
           src={image}
           fill
           alt="cardImage"
+          quality={100}
           className="relative w-full h-full"
         />
       </div>

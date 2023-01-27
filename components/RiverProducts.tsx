@@ -29,6 +29,7 @@ const RiverProducts = () => {
               <div className="w-full">
                 <Image
                   src={ele.image}
+                  quality={100}
                   fill
                   alt="riverProduct"
                   className="relative w-full h-full"

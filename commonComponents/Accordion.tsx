@@ -1,5 +1,5 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/interactive-supports-focus */
+
 import React from "react";
 
 export interface IAccordion {
@@ -25,6 +25,7 @@ const Accordion = ({
         <div className="w-2/3 justify-between">{title}</div>
         <div
           className="w-1/3 text-right"
+          role="button"
           onClick={() => toggleHandler(itemIndex)}
         >
           {isOpen ? "-" : "+"}

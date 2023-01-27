@@ -42,6 +42,7 @@ const Carousel = () => {
               <Image
                 src={ele.image}
                 alt=""
+                quality={100}
                 width={320}
                 height={476}
                 className="w-full h-full"
@@ -51,6 +52,7 @@ const Carousel = () => {
                   <Image
                     src="/images/product/uparrow.svg"
                     alt=""
+                    quality={100}
                     width={25}
                     height={0}
                   />
@@ -63,6 +65,7 @@ const Carousel = () => {
                 <div>
                   <Image
                     src="/images/product/downarrow.svg"
+                    quality={100}
                     alt=""
                     width={25}
                     height={0}

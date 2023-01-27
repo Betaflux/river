@@ -64,12 +64,14 @@ const PreOrder = () => {
                       className="hidden lg:flex"
                       src="/images/preorder/checked.svg"
                       alt="checked"
+                      quality={100}
                       width={55}
                       height={55}
                     />
                     <Image
                       className="lg:hidden"
                       src="/images/preorder/checked.svg"
+                      quality={100}
                       alt="checked"
                       width={28}
                       height={28}
@@ -115,6 +117,7 @@ const PreOrder = () => {
                 <div key={ele.url} className="relative  w-full">
                   <Image
                     src={ele.url}
+                    quality={100}
                     fill
                     alt="products"
                     className="relative w-full h-full "

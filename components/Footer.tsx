@@ -198,6 +198,7 @@ const Footer = () => {
               src="/images/footer/footerLogo.png"
               fill
               alt="footerLogo"
+              quality={100}
               className="relative w-full h-full"
             />
           </div>
@@ -206,6 +207,7 @@ const Footer = () => {
               src="/images/footer/footerLogoMobile.png"
               fill
               alt="footerLogo"
+              quality={100}
               className="relative w-full h-full"
             />
           </div>

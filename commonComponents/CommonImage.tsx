@@ -1,32 +1,34 @@
-import React from 'react'
+import React from "react";
 import Image from "next/image";
 
-interface ICommonImage{
-  alt:string,
-  smallImage:string,
-  largeImage:string
+interface ICommonImage {
+  alt: string;
+  smallImage: string;
+  largeImage: string;
 }
-const CommonImage = ({alt,smallImage,largeImage}:ICommonImage) => {
+const CommonImage = ({ alt, smallImage, largeImage }: ICommonImage) => {
   return (
     <section className="w-full">
-          <div className="lg:hidden">
-            <Image
-              src={smallImage}
-              fill
-              alt={alt}
-              className="relative w-full h-full"
-            />
-          </div>
-          <div className="hidden lg:flex">
-            <Image
-              src={largeImage}
-              fill
-              alt="bike"
-              className="relative w-full h-full"
-            />
-          </div>
-        </section>
-  )
-}
+      <div className="lg:hidden">
+        <Image
+          src={smallImage}
+          fill
+          alt={alt}
+          quality={100}
+          className="relative w-full h-full"
+        />
+      </div>
+      <div className="hidden lg:flex">
+        <Image
+          src={largeImage}
+          fill
+          alt="bike"
+          quality={100}
+          className="relative w-full h-full"
+        />
+      </div>
+    </section>
+  );
+};
 
 export default CommonImage;

@@ -21,6 +21,7 @@ const ClaimCard = ({
         <Image
           src={url}
           fill
+          quality={100}
           alt={title || ""}
           className="relative w-full h-full"
         />

@@ -224,6 +224,7 @@ const PaymentDetails = () => {
             <Image
               src="/images/paymentdetails/scooter.png"
               alt="scooter"
+              quality={100}
               fill
               className="relative w-full"
             />
