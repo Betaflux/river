@@ -104,8 +104,8 @@ const Footer = () => {
   return (
     <footer className="flex flex-col-reverse lg:flex-col w-full bg-blue-37">
       {/* contents  for desktop */}
-      <div className="hidden mt-24 lg:flex flex-row justify-between px-10">
-        {footerData.map((items) => {
+      <div className="hidden mt-24 lg:grid grid-cols-6 px-10">
+        {footerData?.map((items) => {
           return (
             <div key={items.title} className="flex flex-col gap-5">
               <div className="font-sohneHalbfett leading-[35px] text-red-98 text-12xl">
@@ -184,11 +184,13 @@ const Footer = () => {
         </div>
       </div>
       {/* river logo */}
+      <div className="hidden w-full lg:grid grid-cols-6">
+        <div className="col-start-4 col-end-6 font-sohneBuch text-red-98 text-12xl  pt-[91px]">
+          © 2022 World of River Pvt. Ltd.
+        </div>
+      </div>
       <div className="w-full flex flex-col ">
         {/* river pvt ltd */}
-          <div className=" hidden lg:flex justify-end  font-sohneBuch text-red-98 text-12xl w-3/4 pt-[91px] pr-10">
-            © 2022 World of River Pvt. Ltd.
-          </div>
         {/* river logo div */}
         <div className="w-full">
           <div className="hidden w-full lg:flex">
