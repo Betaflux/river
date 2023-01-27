@@ -13,7 +13,9 @@ interface IPreOrderQuestions {
 }
 const PreOrderQuestions = ({ accordionData }: IPreOrderQuestions) => {
   const [limit, setLimit] = useState<number>(3);
-  const [isOpen, setIsOpen] = useState<boolean[]>(new Array(5).fill(false));
+  const [isOpen, setIsOpen] = useState<boolean[]>(
+    new Array(accordionData.length).fill(false)
+  );
   const toggleHandler = (index: number) => {
     const newIsOpen = [...isOpen];
     newIsOpen[index] = !newIsOpen[index];

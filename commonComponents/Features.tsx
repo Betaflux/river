@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   BackgroundColor,
   TextColor,
@@ -21,6 +21,12 @@ const Features = ({
   textColor,
   backgroundColor,
 }: IFeatures) => {
+  const [isOpen, setIsOpen] = useState<boolean[]>([false]);
+  const toggleHandler = (index: number) => {
+    const newIsOpen = [...isOpen];
+    newIsOpen[index] = !newIsOpen[index];
+    setIsOpen(newIsOpen);
+  };
   return (
     <section
       className={`w-full py-[100px] px-5 ${backgroundColor} flex flex-col lg:px-10 lg:flex-row lg:py-[193px]`}
@@ -47,8 +53,11 @@ const Features = ({
           );
         })}
         <div className="w-full  lg:hidden">
-          <div className="border-t-1 border-blue-86 pt-5">
+          <div className="border-t-1 border-blue-86">
             <Accordion
+              itemIndex={0}
+              isOpen={isOpen[0]}
+              toggleHandler={toggleHandler}
               title={claimCards[claimCards.length - 1]?.title || ""}
               desc={claimCards[claimCards.length - 1]?.description || ""}
               color={textColor}
@@ -72,8 +81,11 @@ const Features = ({
           );
         })}
         <div className="w-full  lg:hidden">
-          <div className="border-t-1 border-blue-86 pt-5">
+          <div className="border-t-1 border-blue-86">
             <Accordion
+              itemIndex={0}
+              isOpen={isOpen[0]}
+              toggleHandler={toggleHandler}
               title={claimCards[claimCards.length - 1]?.title || ""}
               desc={claimCards[claimCards.length - 1]?.description || ""}
               color={textColor}

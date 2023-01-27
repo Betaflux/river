@@ -1,5 +1,4 @@
 import React, { Dispatch, SetStateAction, useState } from "react";
-import Accordion from "../commonComponents/Accordion";
 import Button from "../commonComponents/Button";
 import Input from "../commonComponents/Input";
 import Radio from "../commonComponents/Radio";
@@ -82,16 +81,6 @@ const Details = () => {
       >
         Preorder Indie Online
       </Button>
-      {preOrderUpdates.map((e) => {
-        return (
-          <Accordion
-            key={`${e.label}`}
-            title={e.label}
-            desc={e.value}
-            color="text-green-700"
-          />
-        );
-      })}
       {preOrderUpdates.map((e) => {
         return (
           <Radio
