@@ -10,22 +10,20 @@ import {
   Variant,
 } from "../utils/commonFunctions/commonTypes";
 
-interface IProductDescription{
-  description:string
+interface IProductDescription {
+  description: string;
 }
 
-const ProductDescription = ({description}:IProductDescription) => {
+const ProductDescription = ({ description }: IProductDescription) => {
   const router = useRouter();
   return (
     <section className="w-full py-[100px] px-5 lg:flex  lg:px-10 lg:flex-row lg:py-[193px]">
       {/* Title */}
       <div
         className="w-full font-manukaBold 
-           text-13xl leading-13 text-left text-blue-37 mb-[70px] lg:w-1/2 lg:mb-0"
+           text-13xl leading-13 text-left text-blue-37  lg:w-1/2 lg:mb-0"
       >
-        <div className="w-full lg:w-3/4">
-          {description}
-        </div>
+        <div className="w-1/3 lg:w-3/4">{description}</div>
       </div>
       {/* Cards */}
       <div className="w-full flex flex-col-reverse gap-[20px] lg:w-1/2 lg:flex-col-reverse">

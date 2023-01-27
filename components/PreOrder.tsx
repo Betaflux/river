@@ -1,5 +1,6 @@
 import ctl from "@netlify/classnames-template-literals";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import Button from "../commonComponents/Button";
 import {
   BackgroundColor,
@@ -37,6 +38,7 @@ const images = [
   { url: "/images/preorder/color3.png" },
 ];
 const PreOrder = () => {
+  const router = useRouter();
   return (
     <div className="bg-blue-86">
       {/* header */}
@@ -94,7 +96,7 @@ const PreOrder = () => {
                     hoverTextColor={HoverTextColor.disabled}
                     color={TextColor["blue-98"]}
                     handleClick={() => {
-                      console.log("");
+                      router.push("/paymentdetails")
                     }}
                   >
                     Preorder for Rs. 2,500
@@ -149,7 +151,7 @@ const PreOrder = () => {
             hoverTextColor={HoverTextColor["yellow-86"]}
             hoverBackgroundColor={HoverBackgroundColor["blue-19"]}
             handleClick={() => {
-              console.log("working");
+              router.push("/paymentdetails");
             }}
           >
             Preorder Indie Online

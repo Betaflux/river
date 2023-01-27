@@ -186,7 +186,7 @@ const Product = () => {
         <MenuBar />
         {/* inde description */}
         <div className="lg:hidden">
-          <ProductDescription description="INTRODUCING INDIE" />
+          <ProductDescription description="" />
         </div>
         <div className="hidden lg:flex">
           <ProductDescription description="Hero-line: A single-sentence description of INDIE" />

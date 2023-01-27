@@ -22,7 +22,7 @@ const PreOrderForm = ({ title, formData }: IPreOrderForm) => {
         {/* 1/3:Contact Details */}
         {title}
       </div>
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-5 lg:gap-10">
         {formData.map((ele) => {
           return (
             <Input

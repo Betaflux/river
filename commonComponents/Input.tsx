@@ -23,7 +23,7 @@ const Input = ({
   labelStyle = {},
 }: IInput) => (
   <div
-    className={`w-full bg-transparent lg:bg-white p-4 border-1 ${
+    className={`w-full bg-transparent lg:bg-white p-4 lg:px-4 lg:py-7 border-1 ${
       error ? "border-red-600" : "border-blue-19"
     }`}
   >
@@ -31,7 +31,7 @@ const Input = ({
       <label
         htmlFor={name}
         style={labelStyle}
-        className="text-blue-61 text-sm leading-11"
+        className="text-blue-61 pl-3.5 text-sm leading-11"
       >
         {label}
       </label>
