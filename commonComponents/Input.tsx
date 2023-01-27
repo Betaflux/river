@@ -23,17 +23,21 @@ const Input = ({
   labelStyle = {},
 }: IInput) => (
   <div
-    className={`w-full p-4 border-2 ${
-      error ? "border-red-600" : "border-black"
+    className={`w-full bg-transparent lg:bg-white p-4 border-1 ${
+      error ? "border-red-600" : "border-blue-19"
     }`}
   >
     {label && (
-      <label htmlFor={name} style={labelStyle}>
+      <label
+        htmlFor={name}
+        style={labelStyle}
+        className="text-blue-61 text-sm leading-11"
+      >
         {label}
       </label>
     )}
     <input
-      className="w-full px-1 focus:outline-none text-lg leading-[25px]"
+      className="w-full appearance-none focus:outline-none focus:ring-0 focus:ring-transparent border-none text-blue-19 bg-transparent text-lg leading-11 lg:text-12xl lg:leading-12"
       type={type}
       name={name}
       autoComplete="off"
