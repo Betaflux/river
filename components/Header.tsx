@@ -6,6 +6,8 @@ import React from "react";
 import Button from "../commonComponents/Button";
 import {
   BackgroundColor,
+  HoverBackgroundColor,
+  HoverTextColor,
   Size,
   TextColor,
   Variant,
@@ -23,20 +25,22 @@ const Header = () => {
   return (
     <nav className="w-full flex flex-col lg:flex-row items-center px-5 lg:py-10 lg:px-8">
       {/* -----left side------  */}
-      <div className="w-full relative lg:w-1/5 mr-auto pt-5  pb-6 lg:pt-0 lg:pb-0">
-        <Image
-          src={`/images/header/${
-            router.pathname.includes("preorder")
-              ? `blueriverlogo.svg`
-              : `yellowriverlogo.svg`
-          }`}
-          fill
-          alt="headerLogo"
-          sizes="(max-width: 768px) 100vw,
+      <div className="w-full flex justify-center relative lg:w-1/5 mr-auto pt-5  pb-6 lg:pt-0 lg:pb-0">
+        <div className="w-1/2 lg:w-full">
+          <Image
+            src={`/images/header/${
+              router.pathname.includes("product")
+                ? `yellowriverlogo.svg`
+                : `blueriverlogo.svg`
+            }`}
+            fill
+            alt="headerLogo"
+            sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"
-          className="relative w-full h-full"
-        />
+            className="relative w-full h-full"
+          />
+        </div>
       </div>
       {/* --------------right side-------- */}
       <div className="w-full lg:w-2/3">
@@ -64,7 +68,7 @@ const Header = () => {
           <div className="hidden lg:flex justify-end w-2/3">
             <div
               className={`${
-                router.pathname.includes("preorder") ? `hidden` : ``
+                router.pathname.includes("paymentdetails") ? `` : `hidden`
               }`}
             >
               <Button
@@ -72,6 +76,8 @@ const Header = () => {
                 size={Size.small}
                 disabled={false}
                 backGroundColor={BackgroundColor["blue-19"]}
+                hoverBackgroundColor={HoverBackgroundColor.disabled}
+                hoverTextColor={HoverTextColor.disabled}
                 color={TextColor["blue-86"]}
                 handleClick={() => {
                   router.push("/preorder");
