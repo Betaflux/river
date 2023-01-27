@@ -3,10 +3,10 @@ import React from 'react'
 import Button from '../commonComponents/Button';
 import { BackgroundColor, HoverBackgroundColor, HoverTextColor, Size, TextColor, Variant } from '../utils/commonFunctions/commonTypes/commonTypes';
 
-const IndeDescription = () => {
+const HeroDescription = () => {
   const router = useRouter();
   return (
-    <section className="hidden w-full py-[94px] px-5 lg:flex  lg:px-10 lg:flex-row lg:py-[120px]">
+    <section className="hidden w-full py-[94px] px-5 lg:flex  lg:px-10 lg:flex-row lg:py-[193px]">
       {/* Title */}
       <div
         className="w-1/2 font-manukaBold 
@@ -50,4 +50,4 @@ const IndeDescription = () => {
   );
 }
 
-export default IndeDescription;
+export default HeroDescription;

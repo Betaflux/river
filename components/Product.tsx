@@ -7,51 +7,109 @@ import {
 } from "../utils/commonFunctions/commonTypes/commonTypes";
 import Footer from "./Footer";
 import Header from "./Header";
-import IntroductionToIndie from "./IntroductionToIndie";
 import Versatility from "./Versatility";
-import CommonImage from "../commonComponents/CoomonImage";
+import CommonImage from "../commonComponents/CommonImage";
 import Features from "../commonComponents/Features";
 import Accessories from "./Accessories";
-import Warenty from "./Warenty";
 import Specification from "./Specification";
 import PricingPreorder from "./PricingPreorder";
-import IndeDescription from "./IndeDescription";
 import Introduction from "../commonComponents/Introduction";
 import RiverProducts from "./RiverProducts";
-
+import Warranty from "./Warranty";
+import ProductInformation from "./ProductInformation";
+import HeroDescription from "./HeroDescription";
+import Carousel from "../commonComponents/Carousel";
+// import Carousel from "../commonComponents/Carousel";
 
 const claimCards = [
   {
-    url: "",
-    title: "Claim 1: Multiple Kickstands",
+    url: "/images/product/frontstorage.png",
+    title: "Front Storage 12L",
+    description:
+      "Short description in a sentence, two, three with points maybe at most.",
+  },
+  {
+    url: "/images/product/backstorage.png",
+    title: "Back Storage 43L",
+    description:
+      "Short description in a sentence, two, three with points maybe at most.",
+  },
+  {
+    url: "/images/product/seatholder.png",
+    title: "Quick Utility Mounts - Pannier",
+    description:
+      "Short description in a sentence, two, three with points maybe at most.",
+  },
+  {
+    url: "/images/product/grabhandle.png",
+    title: "Quick Utility Mounts - Grab Handle",
+    description:
+      "Short description in a sentence, two, three with points maybe at most.",
+  },
+  {
+    url: "/images/product/footpegs.png",
+    title: "Foot Pegs",
+    description:
+      "Short description in a sentence, two, three with points maybe at most.",
+  },
+];
+const designFeature = [
+  {
+    url: "/images/product/headlight.png",
+    title: "Dual Headlights",
+    description:
+      "More visibility and light throw Unique design identity, design language",
+  },
+  {
+    url: "/images/product/lamp.png",
+    title: "Tail Lamp",
+    description: "Short description in a sentence or two at most.",
+  },
+  {
+    url: "/images/product/handlebar.png",
+    title: "Aluminium Clip-on Handlebars",
+    description:
+      "Short description in a sentence, two, three with points maybe at most.",
+  },
+  {
+    url: "/images/product/safeguard.png",
+    title: "Builtin Safeguards",
+    description: "Short description in a sentence or two at most.",
+  },
+];
+const comfortFeature = [
+  {
+    url: "/images/product/widerseat.png",
+    title: "Wider Comfortable Seat",
     description: "hort description in a sentence or two at most.",
   },
   {
-    url: "",
-    title: "Claim 1: Multiple Kickstands",
-    description: "hort description in a sentence or two at most.",
+    url: "/images/product/wheels.png",
+    title: "14 Wheels",
+    description:
+      "Superior architecture to give better control over rough roads and potholes.",
   },
   {
-    url: "",
-    title: "Claim 1: Multiple Kickstands",
-    description: "hort description in a sentence or two at most.",
+    url: "/images/product/suspension.png",
+    title: "Dual Suspension",
+    description: "Better Balance, Made for rugged conditions",
   },
   {
-    url: "",
-    title: "Claim 1: Multiple Kickstands",
+    url: "/images/product/footpegs.png",
+    title: "15-inch Wide Flat Footboard",
     description: "hort description in a sentence or two at most.",
   },
 ];
-const accordionData = [
-  {
-    title: "Builtin Safeguards",
-    desc: "hort description in a sentence or more, this time showing an expanded view below.",
-  },
-  {
-    title: "Builtin Safeguards",
-    desc: "hort description in a sentence or more, this time showing an expanded view below.",
-  },
-];
+// const accordionData = [
+//   {
+//     title: "Builtin Safeguards",
+//     desc: "hort description in a sentence or more, this time showing an expanded view below.",
+//   },
+//   {
+//     title: "Builtin Safeguards",
+//     desc: "hort description in a sentence or more, this time showing an expanded view below.",
+//   },
+// ];
 const accessoriesData = [
   {
     image: "/images/product/pannier.png",
@@ -95,12 +153,13 @@ const Product = () => {
   return (
     <>
       {/* header and hero */}
-      <section className="w-full">
+      <section className="w-full relative">
         <div className="absolute z-20 w-full">
-          <div className="w-full text-center font-[14px] font-sohneBuch leading-11 bg-blue-86 text-blue-19 py-[11px] lg:hidden">
-            Preorder Indie Now
-          </div>
           <Header />
+        </div>
+        <div className="px-5 font-manukaUltra absolute z-20 w-full bottom-5 text-blue-98 text-13xl leading-13 lg:bottom-10  lg:px-10 lg:text-14xl lg:leading-14">
+          <div>SUV OF</div>
+          <div>SCOOTERS</div>
         </div>
         <div className="hidden lg:flex">
           <Image
@@ -120,58 +179,56 @@ const Product = () => {
         </div>
       </section>
       <main>
-        {/* introduction to indie */}
-        <IntroductionToIndie />
+        {/* introduction to indie mobile only */}
+        <ProductInformation />
         {/* introduction to inde desktop */}
         <Introduction />
         {/* inde description */}
-        <IndeDescription />
+        <HeroDescription />
         {/* river products */}
         <RiverProducts />
         {/* product carousel */}
 
-        {/* <ProductCarousel /> */}
+        <Carousel />
 
         {/* versatility section */}
         <Versatility claimCards={claimCards} />
         {/* bike image */}
         <CommonImage
           alt="bike"
-          smallImage="/images/product/mobilebike.png"
-          largeImage="/images/product/desktopbike.png"
+          smallImage="/images/product/bluescootymobile.png"
+          largeImage="/images/product/bluescooty.png"
         />
         {/* comfort features blue */}
         <Features
           feature="Design Features"
-          title="(Small-title)"
-          claimCards={claimCards}
-          accordionData={accordionData}
+          title="(Single-sentence-title)"
+          claimCards={designFeature}
           textColor={TextColor["blue-86"]}
           backgroundColor={BackgroundColor["blue-19"]}
         />
         {/* comfort feature white */}
         <Features
           feature="Comfort Features"
-          title="(Small-title)"
-          claimCards={claimCards}
-          accordionData={accordionData}
+          title="(Single-sentence-title)"
+          claimCards={comfortFeature}
           textColor={TextColor["blue-37"]}
         />
         {/* video section */}
         <CommonImage
           alt="bikevideo"
-          smallImage="/images/product/mobilevideo.png"
-          largeImage="/images/product/desktopvideo.png"
+          smallImage="/images/product/yellowscootymobile.png"
+          largeImage="/images/product/yellowscootydesktop.png"
         />
         {/* accesories */}
         <Accessories title=" Accessories" accessoriesData={accessoriesData} />
         {/* warenty section */}
-        <Warenty />
+        <Warranty />
         {/* image section */}
         <CommonImage
           alt="helmet"
-          smallImage="/images/product/mobilehelmet.png"
-          largeImage="/images/product/desktophelmet.png"
+          smallImage="/images/product/rxmobile.png"
+          largeImage="/images/product/rxdesktop.png"
         />
         {/* specification */}
         <Specification specificationData={specificationData} />

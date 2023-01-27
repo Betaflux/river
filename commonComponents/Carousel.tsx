@@ -16,12 +16,12 @@ const products = [
       "Caption of the image explaining how different people find livelihoods via River.",
   },
   {
-    image: "/images/product/product2.png",
+    image: "/images/product/producttwo.png",
     description:
       "Caption of the image explaining how different people find livelihoods via River.",
   },
   {
-    image: "/images/product/product3.png",
+    image: "/images/product/productthree.png",
     description:
       "Caption of the image explaining how different people find livelihoods via River.",
   },

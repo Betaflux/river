@@ -1,13 +1,13 @@
-import React from 'react'
-import Card, { ICard } from '../commonComponents/Card';
+import React from "react";
+import Card, { ICard } from "../commonComponents/Card";
 
-interface IAccessories{
-  accessoriesData:ICard[];
-  title:string;
+interface IAccessories {
+  accessoriesData: ICard[];
+  title: string;
 }
 const Accessories = ({ accessoriesData, title }: IAccessories) => {
   return (
-    <section className="w-full py-[94px] px-5 lg:py-[188px] lg:px-10">
+    <section className="w-full py-[100px] px-5 lg:py-[188px] lg:px-10">
       {/* Title */}
       <div
         className="w-full font-manukaBold 

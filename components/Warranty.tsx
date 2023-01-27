@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-const Warenty = () => {
+const Warranty = () => {
   return (
     <section className="px-5 py-[94px] bg-blue-86 w-full flex flex-col gap-[20px] lg:px-10 lg:flex-row lg:gap-[135px]">
       <div className="w-full lg:w-1/3">
@@ -32,6 +32,6 @@ const Warenty = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Warenty;
+export default Warranty;

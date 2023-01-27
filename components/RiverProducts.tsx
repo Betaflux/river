@@ -1,19 +1,19 @@
-import Image from 'next/image';
-import React from 'react'
+import Image from "next/image";
+import React from "react";
 
 const products = [
   {
-    image: "/images/product/product1.png",
+    image: "/images/product/productone.png",
     description:
       "Caption of the image explaining how different people find livelihoods via River.",
   },
   {
-    image: "/images/product/product2.png",
+    image: "/images/product/producttwo.png",
     description:
       "Caption of the image explaining how different people find livelihoods via River.",
   },
   {
-    image: "/images/product/product3.png",
+    image: "/images/product/productthree.png",
     description:
       "Caption of the image explaining how different people find livelihoods via River.",
   },
@@ -21,26 +21,31 @@ const products = [
 
 const RiverProducts = () => {
   return (
-    <section className="hidden px-10 lg:flex flex-row gap-[20px] mb-[88px]">
-      {products.map((ele)=>{
-        return (
-          <div className="w-1/3 mb-5" key={ele.description}>
-            <div className="w-full">
-              <Image
-                src={ele.image}
-                fill
-                alt="riverProduct"
-                className="relative w-full h-full"
-              />
+    <section className="px-10 mb-[88px] hidden lg:flex flex-col">
+      <div className="hidden  lg:grid grid-cols-3 gap-[20px]">
+        {products.map((ele) => {
+          return (
+            <div className="w-full mb-5" key={ele.description}>
+              <div className="w-full">
+                <Image
+                  src={ele.image}
+                  fill
+                  alt="riverProduct"
+                  className="relative w-full h-full"
+                />
+              </div>
             </div>
-            <div className="w-full font-sohneBuch text-12xl leading-12 text-blue-37">
-              {ele.description}
-            </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
+      <div className="w-full grid grid-cols-3">
+        <div className="col-start-2 col-end-4 text-blue-37 font-sohneBuch text-12xl leading-13">
+          Caption of the image explaining how different people find livelihoods
+          via River.
+        </div>
+      </div>
     </section>
-  )
-}
+  );
+};
 
 export default RiverProducts;
