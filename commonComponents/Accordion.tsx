@@ -6,9 +6,9 @@ export interface IAccordion {
   title: string;
   desc: string;
   color: string;
-  itemIndex: any;
+  itemIndex: number;
   isOpen: boolean;
-  toggleHandler: any;
+  toggleHandler: (ind: number) => void;
 }
 
 const Accordion = ({
@@ -20,7 +20,7 @@ const Accordion = ({
   toggleHandler,
 }: IAccordion) => {
   return (
-    <details className={`${color}`}>
+    <details className={`${color} mt-5`}>
       <summary className="flex w-full text-lg leading-11 sm:text-2xl sm:leading-12 font-sohneHalbfett">
         <div className="w-2/3 justify-between">{title}</div>
         <div
