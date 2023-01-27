@@ -1,19 +1,19 @@
-import React, { useState } from 'react'
-import Accordion from '../commonComponents/Accordion';
-import Button from '../commonComponents/Button';
-import { HoverBackgroundColor, Size, TextColor, Variant } from '../utils/commonFunctions/commonTypes/commonTypes';
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+import React, { useState } from "react";
+import Accordion from "../commonComponents/Accordion";
 
 type AccordionData = {
   title: string;
   desc: string;
 };
-interface IPreOrderQuestions{
-  accordionData:AccordionData[]
+interface IPreOrderQuestions {
+  accordionData: AccordionData[];
 }
-const PreOrderQuestions = ({accordionData}:IPreOrderQuestions) => {
-  const[limit,setLimit]=useState<number>(3);
+const PreOrderQuestions = ({ accordionData }: IPreOrderQuestions) => {
+  const [limit, setLimit] = useState<number>(3);
   return (
-    <section className="w-full py-[94px] px-5 bg-blue-19 flex flex-col lg:px-10 lg:flex-row">
+    <section className="w-full py-[94px] px-5 bg-blue-19 flex flex-col lg:py-[193px] lg:px-10 lg:flex-row">
       {/* Title */}
       <div
         className="w-full font-manukaBold 
@@ -23,10 +23,13 @@ const PreOrderQuestions = ({accordionData}:IPreOrderQuestions) => {
       </div>
       {/* Cards */}
       <div className="w-full flex flex-col gap-[20px] lg:w-1/2">
-        <div className="w-full grid grid-cols-1">
-          {accordionData?.slice(0,limit).map((items) => {
+        <div className="w-full grid grid-cols-1 lg:hidden">
+          {accordionData?.slice(0, limit).map((items) => {
             return (
-              <div className="border-b-1 border-blue-86 pb-5 last:border-none">
+              <div
+                key={items.title}
+                className="border-b-1 border-blue-86 pb-5 last:border-none"
+              >
                 <Accordion
                   title={items.title}
                   desc={items.desc}
@@ -36,25 +39,36 @@ const PreOrderQuestions = ({accordionData}:IPreOrderQuestions) => {
             );
           })}
         </div>
-        <div className="w-full text-center mt-[50px] lg:hidden">
-          <Button
-            variant={Variant.secondaryDark}
-            size={Size.large}
-            disabled={false}
-            color={TextColor["blue-86"]}
-            hoverBackgroundColor={HoverBackgroundColor["blue-86"]}
-            handleClick={() => {
-             if(limit<accordionData.length-1){
-              setLimit(limit+1);
-             }
-            }}
-          >
-            View More
-          </Button>
+        {/* for desktop */}
+        <div className="hidden  w-full lg:grid lg:grid-cols-1">
+          {accordionData?.map((items) => {
+            return (
+              <div
+                key={items.title}
+                className="border-b-1 border-blue-86 pb-5 last:border-none"
+              >
+                <Accordion
+                  title={items.title}
+                  desc={items.desc}
+                  color="text-blue-86"
+                />
+              </div>
+            );
+          })}
+        </div>
+        <div
+          onClick={() => {
+            if (limit < accordionData.length) {
+              setLimit(limit + 1);
+            }
+          }}
+          className="w-full text-left font-sohneBuch text-10xl leading-11 text-blue-86 underline underline-offset-8 mt-[50px] lg:hidden"
+        >
+          View More
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default PreOrderQuestions;
