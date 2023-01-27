@@ -8,7 +8,7 @@ import {
   Size,
   TextColor,
   Variant,
-} from "../utils/commonFunctions/commonTypes/commonTypes";
+} from "../utils/commonFunctions/commonTypes";
 import Footer from "./Footer";
 import Header from "./Header";
 import PreOrderQuestions from "./PreOrderQuestions";

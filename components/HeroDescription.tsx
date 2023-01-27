@@ -1,7 +1,14 @@
-import { useRouter } from 'next/router';
-import React from 'react'
-import Button from '../commonComponents/Button';
-import { BackgroundColor, HoverBackgroundColor, HoverTextColor, Size, TextColor, Variant } from '../utils/commonFunctions/commonTypes/commonTypes';
+import { useRouter } from "next/router";
+import React from "react";
+import Button from "../commonComponents/Button";
+import {
+  BackgroundColor,
+  HoverBackgroundColor,
+  HoverTextColor,
+  Size,
+  TextColor,
+  Variant,
+} from "../utils/commonFunctions/commonTypes";
 
 const HeroDescription = () => {
   const router = useRouter();
@@ -48,6 +55,6 @@ const HeroDescription = () => {
       </div>
     </section>
   );
-}
+};
 
 export default HeroDescription;

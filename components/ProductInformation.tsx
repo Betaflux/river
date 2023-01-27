@@ -7,7 +7,7 @@ import {
   Size,
   TextColor,
   Variant,
-} from "../utils/commonFunctions/commonTypes/commonTypes";
+} from "../utils/commonFunctions/commonTypes";
 
 const ProductInformation = () => {
   return (

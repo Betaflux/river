@@ -4,7 +4,7 @@ import React from "react";
 import {
   BackgroundColor,
   TextColor,
-} from "../utils/commonFunctions/commonTypes/commonTypes";
+} from "../utils/commonFunctions/commonTypes";
 import Footer from "./Footer";
 import Header from "./Header";
 import Versatility from "./Versatility";

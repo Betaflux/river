@@ -11,7 +11,7 @@ import {
   Size,
   TextColor,
   Variant,
-} from "../utils/commonFunctions/commonTypes/commonTypes";
+} from "../utils/commonFunctions/commonTypes";
 
 const navItems = [
   { title: "Inde", path: "/inde" },

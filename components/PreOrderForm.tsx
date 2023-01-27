@@ -3,7 +3,14 @@ import Accordion from "../commonComponents/Accordion";
 import Button from "../commonComponents/Button";
 import Input from "../commonComponents/Input";
 import Radio from "../commonComponents/Radio";
-import { BackgroundColor, HoverBackgroundColor, HoverTextColor, Size, TextColor, Variant } from "../utils/commonFunctions/commonTypes/commonTypes";
+import {
+  BackgroundColor,
+  HoverBackgroundColor,
+  HoverTextColor,
+  Size,
+  TextColor,
+  Variant,
+} from "../utils/commonFunctions/commonTypes";
 
 import handleValidation from "../utils/commonFunctions/validation";
 import Footer from "./Footer";

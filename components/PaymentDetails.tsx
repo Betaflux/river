@@ -11,7 +11,7 @@ import {
   Size,
   TextColor,
   Variant,
-} from "../utils/commonFunctions/commonTypes/commonTypes";
+} from "../utils/commonFunctions/commonTypes";
 
 import handleValidation from "../utils/commonFunctions/validation";
 import Footer from "./Footer";

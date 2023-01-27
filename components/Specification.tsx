@@ -1,12 +1,19 @@
-import React from 'react'
-import Button from '../commonComponents/Button';
-import Specifications, { ISpecifications } from '../commonComponents/Specifications';
-import { HoverBackgroundColor, Size, TextColor, Variant } from '../utils/commonFunctions/commonTypes/commonTypes';
+import React from "react";
+import Button from "../commonComponents/Button";
+import Specifications, {
+  ISpecifications,
+} from "../commonComponents/Specifications";
+import {
+  HoverBackgroundColor,
+  Size,
+  TextColor,
+  Variant,
+} from "../utils/commonFunctions/commonTypes";
 
-interface ISpecification{
-  specificationData:ISpecifications[]
+interface ISpecification {
+  specificationData: ISpecifications[];
 }
-const Specification = ({specificationData}:ISpecification) => {
+const Specification = ({ specificationData }: ISpecification) => {
   return (
     <section className="w-full py-[94px] px-5 bg-blue-19 flex flex-col lg:px-10 lg:flex-row lg:py-[188px]">
       {/* Title */}
@@ -19,8 +26,8 @@ const Specification = ({specificationData}:ISpecification) => {
       {/* Cards */}
       <div className="w-full flex flex-col gap-[20px] lg:w-2/3 lg:ml-[60px]">
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 lg:gap-x-[20px]">
-          {specificationData?.map((ele)=>{
-            return <Specifications title={ele.title} desc={ele.desc}/>
+          {specificationData?.map((ele) => {
+            return <Specifications title={ele.title} desc={ele.desc} />;
           })}
         </div>
         <div className="w-full text-center mt-[50px] lg:text-left lg:mt-[126px]">
@@ -40,6 +47,6 @@ const Specification = ({specificationData}:ISpecification) => {
       </div>
     </section>
   );
-}
+};
 
 export default Specification;

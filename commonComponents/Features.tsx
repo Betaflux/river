@@ -2,7 +2,7 @@ import React from "react";
 import {
   BackgroundColor,
   TextColor,
-} from "../utils/commonFunctions/commonTypes/commonTypes";
+} from "../utils/commonFunctions/commonTypes";
 import Accordion from "./Accordion";
 import ClaimCard, { IClaimCard } from "./ClaimCard";
 

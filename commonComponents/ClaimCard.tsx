@@ -1,19 +1,29 @@
-import React from 'react'
+import React from "react";
 import Image from "next/image";
-import { TextColor } from '../utils/commonFunctions/commonTypes/commonTypes';
+import { TextColor } from "../utils/commonFunctions/commonTypes";
 
-export interface IClaimCard{
-  url:string,
-  title?:string,
-  description?:string,
-  color?:TextColor
+export interface IClaimCard {
+  url: string;
+  title?: string;
+  description?: string;
+  color?: TextColor;
 }
-const ClaimCard = ({url,title,description,color=TextColor['blue-37']}:IClaimCard) => {
+const ClaimCard = ({
+  url,
+  title,
+  description,
+  color = TextColor["blue-37"],
+}: IClaimCard) => {
   return (
     <article className="w-full">
       {/* image */}
       <div className="w-full">
-        <Image src={url} fill alt={title||""} className="relative w-full h-full" />
+        <Image
+          src={url}
+          fill
+          alt={title || ""}
+          className="relative w-full h-full"
+        />
       </div>
       {/* contents */}
       <div className="w-full mt-[13px] lg:mt-[29px]">
@@ -30,6 +40,6 @@ const ClaimCard = ({url,title,description,color=TextColor['blue-37']}:IClaimCard
       </div>
     </article>
   );
-}
+};
 
 export default ClaimCard;

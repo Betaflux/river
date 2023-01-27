@@ -7,7 +7,7 @@ import {
   Size,
   TextColor,
   Variant,
-} from "../utils/commonFunctions/commonTypes/commonTypes";
+} from "../utils/commonFunctions/commonTypes";
 
 type ButtonType = JSX.IntrinsicElements["button"]["type"];
 
