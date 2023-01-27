@@ -62,7 +62,7 @@ const PreOrderQuestions = ({ accordionData }: IPreOrderQuestions) => {
               setLimit(limit + 1);
             }
           }}
-          className="w-full text-left font-sohneBuch text-10xl leading-11 text-blue-86 underline underline-offset-8 mt-[50px] lg:hidden"
+          className="cursor-pointer w-full text-left font-sohneBuch text-10xl leading-11 text-blue-86 underline underline-offset-8 mt-[50px] lg:hidden"
         >
           View More
         </div>

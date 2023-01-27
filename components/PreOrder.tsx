@@ -58,8 +58,8 @@ const PreOrder = () => {
               <div className="w-2/3 flex flex-col gap-3.5 lg:gap-8">
                 {" "}
                 <div className="w-full flex flex-row gap-5">
-                  <div className="bg-red-61 w-[55px] h-[55px] lg:w-[210px] lg:h-[98px]" />
-                  <div className="bg-blue-37 w-[55px] h-[55px] lg:w-[210px] lg:h-[98px] flex justify-center items-center">
+                  <div className="bg-red-61 w-[55px] h-[55px] cursor-pointer lg:w-[210px] lg:h-[98px]" />
+                  <div className="bg-blue-37 w-[55px] h-[55px] cursor-pointer lg:w-[210px] lg:h-[98px] flex justify-center items-center">
                     <Image
                       className="hidden lg:flex"
                       src="/images/preorder/checked.svg"
@@ -75,7 +75,7 @@ const PreOrder = () => {
                       height={28}
                     />
                   </div>
-                  <div className="bg-yellow-86 w-[55px] h-[55px] lg:w-[210px] lg:h-[98px]" />
+                  <div className="bg-yellow-86 w-[55px] h-[55px] cursor-pointer lg:w-[210px] lg:h-[98px]" />
                 </div>
                 <div className="text-10xl text-blue-61 font-sohneBuch leading-11 lg:text-12xl lg:leading-12">
                   Selected: Rio Blue

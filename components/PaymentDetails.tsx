@@ -238,7 +238,7 @@ const PaymentDetails = () => {
               <div className="flex flex-row justify-between items-center">
                 <div className={option}>RIO Blue</div>
                 <div
-                  className={`${title} underline underline-offset-8 pointer`}
+                  className={`${title} underline underline-offset-8 cursor-pointer`}
                 >
                   Change
                 </div>
@@ -247,7 +247,9 @@ const PaymentDetails = () => {
             {/* mobile view */}
             <div className="lg:hidden">
               <div className={title}>Colour: RIO Blue</div>
-              <div className={`${title} underline underline-offset-8 pointer`}>
+              <div
+                className={`${title} underline underline-offset-8 cursor-pointer`}
+              >
                 Change
               </div>
             </div>
