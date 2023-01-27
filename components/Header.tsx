@@ -26,9 +26,10 @@ const Header = () => {
     <nav className="w-full flex flex-col lg:flex-row items-center px-5 lg:py-10 lg:px-8">
       {/* -----left side------  */}
       <div className="w-full flex justify-center relative lg:w-1/5 mr-auto pt-5  pb-6 lg:pt-0 lg:pb-0">
-        <div className="w-1/2 lg:w-full">
+        <Link href="/" className="w-1/2 lg:w-full">
           <Image
             src={`/images/header/${
+              router.pathname.split("").length === 1 ||
               router.pathname.includes("product")
                 ? `yellowriverlogo.svg`
                 : `blueriverlogo.svg`
@@ -40,7 +41,7 @@ const Header = () => {
               33vw"
             className="relative w-full h-full"
           />
-        </div>
+        </Link>
       </div>
       {/* --------------right side-------- */}
       <div className="w-full lg:w-2/3">
@@ -55,9 +56,10 @@ const Header = () => {
                   href={items.path}
                   key={index}
                   className={`${
-                    router.pathname.includes("preorder")
-                      ? `text-blue-37`
-                      : `text-blue-92`
+                    router.pathname.split("").length === 1 ||
+                    router.pathname.includes("product")
+                      ? `text-blue-92`
+                      : `text-blue-37`
                   }`}
                 >
                   {items.title}
