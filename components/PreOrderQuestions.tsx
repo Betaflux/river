@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Accordion from "../commonComponents/Accordion";
 
+
 type AccordionData = {
   title: string;
   desc: string;
@@ -13,9 +14,9 @@ interface IPreOrderQuestions {
 const PreOrderQuestions = ({ accordionData }: IPreOrderQuestions) => {
   const [limit, setLimit] = useState<number>(3);
   const [isOpen, setIsOpen] = useState<boolean[]>(new Array(5).fill(false));
-  const toggleHandler = (ind: any) => {
+  const toggleHandler = (index: number) => {
     const newIsOpen = [...isOpen];
-    newIsOpen[ind] = !newIsOpen[ind];
+    newIsOpen[index] = !newIsOpen[index];
     setIsOpen(newIsOpen);
   };
 

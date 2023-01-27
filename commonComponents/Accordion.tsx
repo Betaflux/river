@@ -8,7 +8,7 @@ export interface IAccordion {
   color: string;
   itemIndex: number;
   isOpen: boolean;
-  toggleHandler: (ind: number) => void;
+  toggleHandler: (index: number) => void;
 }
 
 const Accordion = ({
