@@ -8,7 +8,7 @@ export interface IAccordion {
 
 const Accordion = ({ title, desc, color }: IAccordion) => {
   return (
-    <details className={`${color}`}>
+    <details className={`${color} mt-5`}>
       <summary className="flex w-full text-lg leading-11 sm:text-2xl sm:leading-12 font-sohneHalbfett">
         <div className="w-2/3 justify-between">{title}</div>
         <div className="w-1/3 text-right" role="button">
