@@ -8,7 +8,7 @@ const indeItems = [
   { title: "Pricing", path: "/pricing" },
   { title: "Preorder", path: "/preorder" },
 ];
-const Introduction = () => {
+const MenuBar = () => {
   return (
     <section className="w-full hidden lg:flex flex-row  px-10">
       <div className="w-1/2" />
@@ -28,4 +28,4 @@ const Introduction = () => {
   );
 };
 
-export default Introduction;
+export default MenuBar;

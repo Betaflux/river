@@ -13,12 +13,11 @@ import Features from "../commonComponents/Features";
 import Accessories from "./Accessories";
 import Specification from "./Specification";
 import PricingPreorder from "./PricingPreorder";
-import Introduction from "../commonComponents/Introduction";
 import RiverProducts from "./RiverProducts";
 import Warranty from "./Warranty";
-import ProductInformation from "./ProductInformation";
-import HeroDescription from "./HeroDescription";
 import Carousel from "../commonComponents/Carousel";
+import ProductDescription from "./ProductDescription";
+import MenuBar from "../commonComponents/MenuBar";
 // import Carousel from "../commonComponents/Carousel";
 
 const claimCards = [
@@ -180,11 +179,16 @@ const Product = () => {
       </section>
       <main>
         {/* introduction to indie mobile only */}
-        <ProductInformation />
+        {/* <ProductInformation /> */}
         {/* introduction to inde desktop */}
-        <Introduction />
+        <MenuBar />
         {/* inde description */}
-        <HeroDescription />
+        <div className="lg:hidden">
+          <ProductDescription description="INTRODUCING INDIE" />
+        </div>
+        <div className="hidden lg:flex">
+          <ProductDescription description="Hero-line: A single-sentence description of INDIE" />
+        </div>
         {/* river products */}
         <RiverProducts />
         {/* product carousel */}
