@@ -40,7 +40,7 @@ const Features = ({
         <div>{title}</div>
       </div>
       {/* Cards */}
-      <div className="lg:hidden w-full grid grid-cols-1 gap-y-[70px] lg:w-2/3 lg:grid-cols-2 lg:gap-x-[20px] lg:gap-y-[65px] lg:ml-[60px]">
+      <div className="md:hidden w-full grid grid-cols-1 gap-y-[70px] lg:w-2/3 lg:grid-cols-2 lg:gap-x-[20px] lg:gap-y-[65px] lg:ml-[60px]">
         {claimCards?.slice(0, 3).map((cards) => {
           return (
             <ClaimCard
@@ -68,7 +68,8 @@ const Features = ({
           </div>
         </div>
       </div>
-      <div className="hidden w-full lg:grid grid-cols-1 gap-y-[70px] lg:w-2/3 lg:grid-cols-2 lg:gap-x-[20px] lg:gap-y-[65px] lg:ml-[60px]">
+      {/* Cards for desktop and tablet */}
+      <div className="hidden w-full md:grid grid-cols-1 gap-y-[70px] lg:w-2/3 md:grid-cols-2 md:gap-x-[20px] md:gap-y-[65px] lg:ml-[60px]">
         {claimCards?.map((cards) => {
           return (
             <ClaimCard
@@ -80,7 +81,7 @@ const Features = ({
             />
           );
         })}
-        <div className="w-full  lg:hidden">
+        <div className="w-full  md:hidden">
           <div className="border-t-1 border-blue-86">
             <Accordion
               itemIndex={0}

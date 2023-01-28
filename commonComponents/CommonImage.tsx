@@ -9,7 +9,7 @@ interface ICommonImage {
 const CommonImage = ({ alt, smallImage, largeImage }: ICommonImage) => {
   return (
     <section className="w-full">
-      <div className="lg:hidden">
+      <div className="md:hidden">
         <Image
           src={smallImage}
           fill
@@ -18,7 +18,7 @@ const CommonImage = ({ alt, smallImage, largeImage }: ICommonImage) => {
           className="relative w-full h-full"
         />
       </div>
-      <div className="hidden lg:flex">
+      <div className="hidden md:flex">
         <Image
           src={largeImage}
           fill
