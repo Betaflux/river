@@ -17,7 +17,7 @@ interface IProductDescription {
 const ProductDescription = ({ description }: IProductDescription) => {
   const router = useRouter();
   return (
-    <section className="w-full py-[100px] px-5 lg:flex  lg:px-10 lg:flex-row lg:py-[193px]">
+    <section className="w-full py-[100px] px-5 lg:flex  lg:px-10 lg:flex-row lg:py-[200px]">
       {/* Title */}
       <div
         className="w-full font-manukaBold 

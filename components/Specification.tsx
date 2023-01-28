@@ -15,7 +15,7 @@ interface ISpecification {
 }
 const Specification = ({ specificationData }: ISpecification) => {
   return (
-    <section className="w-full py-[94px] px-5 bg-blue-19 flex flex-col lg:px-10 lg:flex-row lg:py-[188px]">
+    <section className="w-full py-[94px] px-5 bg-blue-19 flex flex-col lg:px-10 lg:flex-row lg:py-[200px]">
       {/* Title */}
       <div
         className="w-full font-manukaBold 

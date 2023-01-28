@@ -7,7 +7,7 @@ interface IAccessories {
 }
 const Accessories = ({ accessoriesData, title }: IAccessories) => {
   return (
-    <section className="w-full py-[100px] px-5 lg:py-[188px] lg:px-10">
+    <section className="w-full py-[100px] px-5 lg:py-[200px] lg:px-10">
       {/* Title */}
       <div
         className="w-full font-manukaBold 

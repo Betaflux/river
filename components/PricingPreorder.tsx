@@ -13,7 +13,7 @@ import {
 const PricingPreorder = () => {
   const router = useRouter();
   return (
-    <section className="w-full py-[94px] px-5 flex flex-col lg:px-10 lg:flex-row lg:py-[188px]">
+    <section className="w-full py-[94px] px-5 flex flex-col lg:px-10 lg:flex-row lg:py-[200px]">
       {/* Title */}
       <div
         className="w-3/4 font-manukaBold 
