@@ -153,7 +153,7 @@ const Product = () => {
     <>
       {/* header and hero */}
       <section className="w-full relative">
-        <div className="absolute z-20 w-full">
+        <div className="absolute z-50 w-full">
           <Header />
         </div>
         <div className="px-5 font-manukaUltra absolute z-20 w-full bottom-5 text-blue-98 text-13xl leading-13 lg:bottom-10  lg:px-10 lg:text-14xl lg:leading-14">

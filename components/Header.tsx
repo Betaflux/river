@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../commonComponents/Button";
 import {
   BackgroundColor,
@@ -21,9 +21,26 @@ const navItems = [
 ];
 const Header = () => {
   const router = useRouter();
-
+  const [goingUp, setGoingUp] = useState(false);
+  const handleScroll = () => {
+    if (window.scrollY >= 104) {
+      setGoingUp(true);
+      console.log(goingUp);
+    } else {
+      setGoingUp(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <nav className="w-full flex flex-col lg:flex-row items-center px-5 lg:py-10 lg:px-8">
+    <nav
+      className={`${
+        goingUp ? `bg-blue-19` : ``
+      }  w-full flex flex-col lg:flex-row items-center px-5 lg:py-5 lg:px-8 ${
+        router.pathname.split("").length === 1 ? `fixed` : `sticky`
+      }  z-50 top-0 left-0 lg:h-[121px]`}
+    >
       {/* -----left side------  */}
       <div className="w-full flex justify-center relative lg:w-1/5 mr-auto pt-5  pb-6 lg:pt-0 lg:pb-0">
         <Link href="/" className="w-1/2 lg:w-full">
@@ -71,7 +88,7 @@ const Header = () => {
           <div className="hidden lg:flex justify-end w-2/3">
             <div
               className={`${
-                router.pathname.includes("paymentdetails") ? `` : `hidden`
+                router.pathname.includes("paymentdetails") ? `hidden` : ``
               }`}
             >
               <Button

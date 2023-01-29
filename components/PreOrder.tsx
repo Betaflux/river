@@ -44,7 +44,7 @@ const PreOrder = () => {
       {/* header */}
       <Header />
       {/* preorder inde text */}
-      <section className="w-full px-5 py-[88px] lg:px-10 lg:py-[135px]">
+      <section className="w-full px-5 py-[100px] lg:px-10 lg:py-[200px]">
         <div className={ultraBold}>Preorder</div>
         <div className={ultraBold}>INDIE</div>
       </section>
@@ -96,7 +96,7 @@ const PreOrder = () => {
                     hoverTextColor={HoverTextColor.disabled}
                     color={TextColor["blue-98"]}
                     handleClick={() => {
-                      router.push("/paymentdetails")
+                      router.push("/paymentdetails");
                     }}
                   >
                     Preorder for Rs. 2,500
