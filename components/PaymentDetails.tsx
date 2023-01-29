@@ -200,7 +200,7 @@ const PaymentDetails = () => {
       {/* Header */}
       <Header />
       {/* preorder Inde text */}
-      <section className="w-full px-5 py-[100px] lg:px-10 lg:py-[143px]">
+      <section className="w-full px-5 lg:px-10 padding-top-bottom">
         <div className="text-blue-37 text-10xl leading-11 lg:text-12xl lg:leading-12 font-sohneBuch">
           Preordering Indie
         </div>
@@ -214,7 +214,7 @@ const PaymentDetails = () => {
       {/* billing details */}
       <PreOrderForm title="3/3:Billing Details" formData={billingDetails} />
       {/* confirm booking information */}
-      <section className="bg-blue-19 flex flex-col px-5 py-[93px] lg:px-10 lg:flex-row lg:gap-5 lg:py-[193px]">
+      <section className="bg-blue-19 flex flex-col px-5  lg:px-10 lg:flex-row lg:gap-5 padding-top-bottom">
         <div className="w-full lg:w-1/2">
           <div className="w-1/3 font-manukaBold text-blue-86 mb-[45px] text-13xl leading-13 lg:w-full  lg:mb-[93px]">
             Confirm Booking Information

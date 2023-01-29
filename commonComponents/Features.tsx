@@ -29,7 +29,7 @@ const Features = ({
   };
   return (
     <section
-      className={`w-full py-[100px] px-5 ${backgroundColor} flex flex-col lg:px-10 lg:flex-row lg:py-[193px]`}
+      className={`w-full  px-5 ${backgroundColor} flex flex-col lg:px-10 lg:flex-row padding-top-bottom`}
     >
       {/* Title */}
       <div

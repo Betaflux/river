@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import Accordion from "../commonComponents/Accordion";
 
-
 type AccordionData = {
   title: string;
   desc: string;
@@ -23,7 +22,7 @@ const PreOrderQuestions = ({ accordionData }: IPreOrderQuestions) => {
   };
 
   return (
-    <section className="w-full py-[94px] px-5 bg-blue-19 flex flex-col lg:py-[193px] lg:px-10 lg:flex-row">
+    <section className="w-full  px-5 bg-blue-19 flex flex-col padding-top-bottom lg:px-10 lg:flex-row">
       {/* Title */}
       <div
         className="w-full font-manukaBold 

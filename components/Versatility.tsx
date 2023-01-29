@@ -11,7 +11,7 @@ interface IClaimCards {
 }
 const Versatility = ({ claimCards }: IClaimCards) => {
   return (
-    <section className="w-full py-[100px] px-5 bg-blue-86 lg:px-10 flex flex-col lg:flex-row lg:py-[200px]">
+    <section className="w-full  px-5 bg-blue-86 lg:px-10 flex flex-col lg:flex-row padding-top-bottom">
       {/* Title */}
       <div
         className="w-full font-manukaBold 
