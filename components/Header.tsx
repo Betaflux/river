@@ -115,7 +115,7 @@ const Header = () => {
       {goingUp && (
         <nav
           className={`${
-            goingUp ? `transition-all ease-in delay-700 bg-blue-19 ` : ``
+            goingUp ? `transition ease-in delay-1000 bg-blue-19 ` : ``
           }  w-full flex  md:flex-row items-center md:px-5 lg:py-5 lg:px-8 ${
             router.pathname.split("").length === 1 ? `fixed` : `sticky`
           }  z-50 top-0 left-0 `}
