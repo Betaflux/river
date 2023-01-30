@@ -100,38 +100,52 @@ const footerDataMobile = [
     ],
   },
 ];
+
 const Footer = () => {
   return (
-    <footer className="flex flex-col-reverse lg:flex-col w-full bg-blue-37">
+    <footer className="flex flex-col-reverse md:flex-col w-full bg-blue-37">
       {/* contents  for desktop */}
-      <div className="hidden mt-24 lg:grid grid-cols-6 px-10">
+      <div className="hidden mt-24 md:grid grid-cols-6 lg:grid-cols-12 gap-x-5 px-10 font-normal">
         {footerData?.map((items) => {
           return (
-            <div key={items.title} className="flex flex-col gap-5">
-              <div className="font-sohneHalbfett leading-[35px] text-red-98 text-12xl">
+            <div key={items.title} className="col-span-2">
+              <div className="font-sohneHalbfett leading-[30px] lg:leading-12 text-red-98 text-11xl lg:text-12xl mb-5">
                 {items.title}
               </div>
-              {items.contents.map((contents) => {
-                return (
-                  <Link
-                    href={contents.path}
-                    key={contents.path}
-                    className="font-sohneBuch text-red-98  leading-[25px] text-12xl"
-                  >
-                    {contents.links}
-                  </Link>
-                );
-              })}
+              <div className="flex flex-col gap-5">
+                {items.contents.map((contents) => {
+                  return (
+                    <Link
+                      href={contents.path}
+                      key={contents.path}
+                      className="font-sohneBuch text-red-98  leading-[30px] text-11xl lg:leading-12 lg:text-12xl"
+                    >
+                      {contents.links}
+                    </Link>
+                  );
+                })}
+              </div>
             </div>
           );
         })}
       </div>
       {/* river pvt ltd for mobile */}
-      <div className="lg:hidden font-sohneBuch  text-red-98 text-10xl text-left px-5 mt-[60px] pb-[29px]">
-        © 2022 World of River Pvt. Ltd.
+      <div className="md:hidden font-normal font-sohneBuch  text-red-98 text-10xl text-left px-5 mt-[60px] pb-[90px]">
+        <div>© 2023 World of River Pvt. Ltd.</div>
+        <div className="w-full mt-11">
+          <div className="font-sohneHalbfett font-normal text-red-98 text-10xl leading-11">
+            World Of River Private Limited
+          </div>
+          <div className="font-sohneBuch leading-11 text-red-98 text-10xl  font-normal">
+            <div>Cin: U34300KA2020PTC142304</div> Registered Office: No. 25/3,
+            KIADB EPIP Zone,Seetharampalya-Hoodi RoadMahadevapura, Whitefield
+            Bengaluru 560048 <div>Email: info@rideriver.com</div>
+            <div> Phone No: 9876543210</div>
+          </div>
+        </div>
       </div>
       {/* contents for mobile view */}
-      <div className="px-5 lg:hidden flex justify-between flex-wrap  text-red-98">
+      <div className="px-5 md:hidden flex justify-between flex-wrap font-normal text-red-98">
         <div className="w-1/2">
           {footerDataMobile.slice(0, 3).map((items) => {
             return (
@@ -184,16 +198,28 @@ const Footer = () => {
         </div>
       </div>
       {/* river logo */}
-      <div className="hidden w-full lg:grid grid-cols-6">
-        <div className="col-start-4 col-end-6 font-sohneBuch text-red-98 text-12xl  pt-[91px]">
-          © 2022 World of River Pvt. Ltd.
-        </div>
-      </div>
-      <div className="w-full flex flex-col ">
+
+      <div className="w-full flex flex-col relative md:mt-[91px]">
         {/* river pvt ltd */}
+        <div className="hidden w-full md:grid md:grid-cols-6 lg:grid-cols-12 px-10 absolute z-10 ">
+          <div className="col-start-1 font-normal col-end-4 lg:col-end-6 font-sohneBuch text-red-98 text-11xl leading-[30px] lg:text-12xl lg:leading-12">
+            © 2023 World of River Pvt. Ltd.
+          </div>
+          <div className="col-start-4 col-end-7 lg:col-start-7 lg:col-end-12">
+            <div className="font-sohneHalbfett font-normal text-red-98 text-11xl leading-[30px] lg:text-12xl lg:leading-12">
+              World Of River Private Limited
+            </div>
+            <div className="font-sohneBuch leading-[30px] text-red-98 text-11xl lg:text-12xl lg:leading-12 font-normal">
+              <div>Cin: U34300KA2020PTC142304</div> Registered Office: No. 25/3,
+              KIADB EPIP Zone,Seetharampalya-Hoodi RoadMahadevapura, Whitefield
+              Bengaluru 560048 <div>Email: info@rideriver.com</div>
+              <div> Phone No: 9876543210</div>
+            </div>
+          </div>
+        </div>
         {/* river logo div */}
-        <div className="w-full">
-          <div className="hidden w-full lg:flex">
+        <div className="w-full md:mt-[170px] lg:mt-[150px]">
+          <div className="hidden w-full md:flex">
             <Image
               src="/images/footer/footerLogo.png"
               fill
@@ -202,7 +228,7 @@ const Footer = () => {
               className="relative w-full h-full"
             />
           </div>
-          <div className="w-full lg:hidden">
+          <div className="w-full md:hidden">
             <Image
               src="/images/footer/footerLogoMobile.png"
               fill
