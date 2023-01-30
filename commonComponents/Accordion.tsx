@@ -1,5 +1,7 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 
+import Image from "next/image";
 import React from "react";
 
 export interface IAccordion {
@@ -8,6 +10,7 @@ export interface IAccordion {
   color: string;
   itemIndex: number;
   isOpen: boolean;
+  imageUrl?:string;
   toggleHandler: (index: number) => void;
 }
 
@@ -18,6 +21,7 @@ const Accordion = ({
   isOpen,
   itemIndex,
   toggleHandler,
+  imageUrl
 }: IAccordion) => {
   return (
     <details className={`${color} mt-5`}>
@@ -34,6 +38,17 @@ const Accordion = ({
       <div className="text-lg leading-11 sm:text-2xl font-sohneBuch sm:leading-12">
         {desc}
       </div>
+      {imageUrl && (
+        <div className="w-full mt-4">
+          <Image
+            src={imageUrl}
+            alt="accordionImage"
+            fill
+            quality={100}
+            className="w-full h-full relative"
+          />
+        </div>
+      )}
     </details>
   );
 };

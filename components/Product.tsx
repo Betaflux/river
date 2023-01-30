@@ -75,6 +75,11 @@ const designFeature = [
     title: "Builtin Safeguards",
     description: "Short description in a sentence or two at most.",
   },
+  {
+    url: "/images/product/safeguard.png",
+    title: "Builtin Safeguards",
+    description: "Short description in a sentence or two at most.",
+  },
 ];
 const comfortFeature = [
   {
@@ -92,6 +97,11 @@ const comfortFeature = [
     url: "/images/product/suspension.png",
     title: "Dual Suspension",
     description: "Better Balance, Made for rugged conditions",
+  },
+  {
+    url: "/images/product/footpegs.png",
+    title: "15-inch Wide Flat Footboard",
+    description: "hort description in a sentence or two at most.",
   },
   {
     url: "/images/product/footpegs.png",
@@ -134,7 +144,7 @@ const accessoriesData = [
     image: "/images/product/mobileholder.png",
     title: "Mobile holder",
     paragraph: "hort description in a sentence or two at most.",
-  },
+  }
 ];
 const specificationData = [
   { title: "Range", desc: "132 kilometers per charge" },
