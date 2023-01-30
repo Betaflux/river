@@ -17,7 +17,7 @@ const MenuBar = () => {
           return (
             <Link
               href={items.path}
-              className="text-blue-37 text-12xl leading-12"
+              className="text-blue-37 font-sohneBuch text-12xl leading-12 font-normal"
             >
               {items.title}
             </Link>
