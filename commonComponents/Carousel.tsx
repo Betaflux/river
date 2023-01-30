@@ -28,7 +28,7 @@ const products = [
 ];
 const Carousel = () => {
   return (
-    <div className=" w-full lg:hidden">
+    <div className=" w-full md:hidden">
       <Swiper
         direction="vertical"
         // eslint-disable-next-line react/jsx-boolean-value

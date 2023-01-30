@@ -7,7 +7,7 @@ interface IAccessories {
 }
 const Accessories = ({ accessoriesData, title }: IAccessories) => {
   return (
-    <section className="w-full py-[100px] px-5 lg:py-[188px] lg:px-10">
+    <section className="w-full py-[100px] px-5 lg:py-[200px] lg:px-10">
       {/* Title */}
       <div
         className="w-full font-manukaBold 
@@ -16,7 +16,7 @@ const Accessories = ({ accessoriesData, title }: IAccessories) => {
         {title}
       </div>
       {/* Cards */}
-      <div className="w-full grid grid-cols-1  gap-y-[20px] lg:grid-cols-3 lg:gap-x-[20px]">
+      <div className="w-full grid grid-cols-1  gap-y-[20px] md:grid-cols-2 md:gap-x-[20px] lg:grid-cols-3 lg:gap-x-[20px]">
         {accessoriesData.map((cards) => {
           return (
             <Card

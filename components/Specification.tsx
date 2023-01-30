@@ -5,6 +5,7 @@ import Specifications, {
 } from "../commonComponents/Specifications";
 import {
   HoverBackgroundColor,
+  HoverTextColor,
   Size,
   TextColor,
   Variant,
@@ -15,7 +16,7 @@ interface ISpecification {
 }
 const Specification = ({ specificationData }: ISpecification) => {
   return (
-    <section className="w-full py-[94px] px-5 bg-blue-19 flex flex-col lg:px-10 lg:flex-row lg:py-[188px]">
+    <section className="w-full  px-5 bg-blue-19 flex flex-col lg:px-10 lg:flex-row padding-top-bottom">
       {/* Title */}
       <div
         className="w-full font-manukaBold 
@@ -37,6 +38,7 @@ const Specification = ({ specificationData }: ISpecification) => {
             disabled={false}
             color={TextColor["blue-86"]}
             hoverBackgroundColor={HoverBackgroundColor["blue-86"]}
+            hoverTextColor={HoverTextColor["blue-37"]}
             handleClick={() => {
               console.log("working");
             }}

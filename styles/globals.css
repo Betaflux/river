@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .padding-top-bottom {
+    @apply py-[100px] lg:py-[200px];
+  }
+}
 
 @font-face {
   font-family: "manukaThin";

@@ -21,8 +21,8 @@ const products = [
 
 const RiverProducts = () => {
   return (
-    <section className="px-10 mb-[88px] hidden lg:flex flex-col">
-      <div className="hidden  lg:grid grid-cols-3 gap-[20px]">
+    <section className="px-5 lg:px-10 mb-[88px] hidden md:flex flex-col">
+      <div className="hidden  md:grid grid-cols-3 gap-[20px]">
         {products.map((ele) => {
           return (
             <div className="w-full mb-5" key={ele.description}>

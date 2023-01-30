@@ -37,6 +37,9 @@ const images = [
   { url: "/images/preorder/color2.png" },
   { url: "/images/preorder/color3.png" },
 ];
+const fontsize = ctl(
+  `text-10xl leading-11 md:text-11xl md:leading-[30px] lg:text-12xl lg:leading-12`
+);
 const PreOrder = () => {
   const router = useRouter();
   return (
@@ -50,51 +53,59 @@ const PreOrder = () => {
       </section>
       {/* select color */}
       <section className="px-5 lg:px-10 mb-[78px] lg:mb-[200px]">
-        <div className="w-full flex flex-col gap-11 lg:gap-8">
-          <div className="sticky z-30 top-0">
-            <div className="text-10xl text-blue-19 font-sohneBuch leading-11 mb-[14px] lg:mb-[32px] lg:text-12xl lg:leading-12">
-              Select Colour
-            </div>
-
-            <div className="flex justify-between ">
-              <div className="w-2/3 flex flex-col gap-3.5 lg:gap-8">
-                {" "}
-                <div className="w-full flex flex-row gap-5">
-                  <div className="bg-red-61 w-[55px] h-[55px] cursor-pointer lg:w-[210px] lg:h-[98px]" />
-                  <div className="bg-blue-37 w-[55px] h-[55px] cursor-pointer lg:w-[210px] lg:h-[98px] flex justify-center items-center">
+        <div className="w-full flex flex-col-reverse lg:flex-row lg:gap-2.5">
+          <div className="w-full lg:w-2/3">
+            {" "}
+            <div className="flex flex-col gap-2.5">
+              {images.map((ele) => {
+                return (
+                  <div key={ele.url} className="relative  w-full">
                     <Image
-                      className="hidden lg:flex"
-                      src="/images/preorder/checked.svg"
-                      alt="checked"
+                      src={ele.url}
                       quality={100}
-                      width={55}
-                      height={55}
-                    />
-                    <Image
-                      className="lg:hidden"
-                      src="/images/preorder/checked.svg"
-                      quality={100}
-                      alt="checked"
-                      width={28}
-                      height={28}
+                      fill
+                      alt="products"
+                      className="relative w-full h-full "
                     />
                   </div>
-                  <div className="bg-yellow-86 w-[55px] h-[55px] cursor-pointer lg:w-[210px] lg:h-[98px]" />
+                );
+              })}
+            </div>
+          </div>
+          <div className="w-full lg:w-1/3">
+            <div className="sticky top-0 mb-[50px] lg:mb-0">
+              {/* color */}
+              <div className="flex flex-col gap-4">
+                <div className={`${fontsize} font-sohneBuch text-blue-19`}>
+                  Select Colour
                 </div>
-                <div className="text-10xl text-blue-61 font-sohneBuch leading-11 lg:text-12xl lg:leading-12">
+                <div className="flex gap-5">
+                  <div className="bg-red-61 w-[55px] h-[55px] lg:w-[95px] lg:h-[95px] rounded-full" />
+                  <div
+                    className="bg-blue-37 w-[55px] h-[55px] lg:w-[95px] lg:h-[95px] 
+                  rounded-full outline -outline-offset-[5px] outline-[5px] 
+                  lg:-outline-offset-[10px] lg:outline-[10px] outline-blue-19 
+                  flex items-center justify-center"
+                  >
+                    1
+                  </div>
+                  <div className="bg-yellow-86 w-[55px] h-[55px] lg:w-[95px]  lg:h-[95px] rounded-full" />
+                </div>
+                <div className={`${fontsize} font-sohneBuch text-blue-61`}>
                   Selected: Rio Blue
                 </div>
               </div>
-              <div className="w-1/3 hidden lg:flex flex-col">
-                <div className="mb-[26px] ">
+              {/* preorder button */}
+              <div className="mt-[97px] hidden lg:flex flex-col">
+                <div>
                   <Button
                     variant={Variant.primary}
-                    size={Size.small}
+                    size={Size.medium}
                     disabled={false}
-                    backGroundColor={BackgroundColor["blue-37"]}
-                    hoverBackgroundColor={HoverBackgroundColor.disabled}
-                    hoverTextColor={HoverTextColor.disabled}
-                    color={TextColor["blue-98"]}
+                    backGroundColor={BackgroundColor["yellow-86"]}
+                    color={TextColor["yellow-19"]}
+                    hoverTextColor={HoverTextColor["yellow-86"]}
+                    hoverBackgroundColor={HoverBackgroundColor["yellow-19"]}
                     handleClick={() => {
                       router.push("/paymentdetails");
                     }}
@@ -102,31 +113,18 @@ const PreOrder = () => {
                     Preorder for Rs. 2,500
                   </Button>
                 </div>
-                <div className="">
-                  <div className="text-blue-37 w-4/5  text-10xl leading-11 lg:text-12xl lg:leading-12 font-sohneBuch">
-                    Ex. Showroom Price, Bangalore starts at Rs. 1,25,000
-                  </div>
-                  <div className="text-blue-37 underline underline-offset-8 text-10xl leading-11 lg:text-12xl lg:leading-12 font-sohneBuch">
-                    View Price Breakup
-                  </div>
+                <div
+                  className={`${fontsize} text-blue-37 font-sohneBuch  mt-5`}
+                >
+                  Ex. Showroom Price, Bangalore starts at Rs. 1,25,000
+                </div>
+                <div
+                  className={`${fontsize} text-blue-37 font-sohneBuch  mt-5 underline underline-offset-8 cursor-pointer`}
+                >
+                  View Price Breakup
                 </div>
               </div>
             </div>
-          </div>
-          <div className="flex flex-col gap-2.5">
-            {images.map((ele) => {
-              return (
-                <div key={ele.url} className="relative  w-full">
-                  <Image
-                    src={ele.url}
-                    quality={100}
-                    fill
-                    alt="products"
-                    className="relative w-full h-full "
-                  />
-                </div>
-              );
-            })}
           </div>
         </div>
       </section>

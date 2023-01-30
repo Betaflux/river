@@ -11,7 +11,7 @@ interface IClaimCards {
 }
 const Versatility = ({ claimCards }: IClaimCards) => {
   return (
-    <section className="w-full py-[100px] px-5 bg-blue-86 lg:px-10 flex flex-col lg:flex-row lg:py-[193px]">
+    <section className="w-full  px-5 bg-blue-86 lg:px-10 flex flex-col lg:flex-row padding-top-bottom">
       {/* Title */}
       <div
         className="w-full font-manukaBold 
@@ -25,7 +25,7 @@ const Versatility = ({ claimCards }: IClaimCards) => {
         </div>
       </div>
       {/* Cards */}
-      <div className="w-full grid grid-cols-1 gap-y-[45px] lg:w-2/3 lg:grid-cols-2 lg:gap-x-[20px] lg:gap-y-[65px] lg:ml-[60px]">
+      <div className="w-full grid grid-cols-1 gap-y-[45px] lg:w-2/3 md:grid-cols-2 md:gap-x-[20px] md:gap-y-[65px] lg:ml-[60px]">
         {claimCards?.map((cards) => {
           return (
             <ClaimCard
