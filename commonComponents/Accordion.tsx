@@ -5,8 +5,8 @@ import Image from "next/image";
 import React from "react";
 
 export interface IAccordion {
-  title: string;
-  desc: string;
+  title: string | undefined;
+  desc: string | undefined;
   color: string;
   itemIndex: number;
   isOpen: boolean;
