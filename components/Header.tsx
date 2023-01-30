@@ -23,7 +23,7 @@ const Header = () => {
   const router = useRouter();
   const [goingUp, setGoingUp] = useState(false);
   const handleScroll = () => {
-    if (window.scrollY >= 104) {
+    if (window.scrollY >= 105) {
       setGoingUp(true);
       console.log(goingUp);
     } else {
