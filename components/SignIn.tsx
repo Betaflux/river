@@ -3,7 +3,14 @@ import { useRouter } from "next/router";
 import React, { Dispatch, SetStateAction, useState } from "react";
 import Button from "../commonComponents/Button";
 import Input from "../commonComponents/Input";
-import { BackgroundColor, HoverBackgroundColor, HoverTextColor, Size, TextColor, Variant } from "../utils/commonFunctions/commonTypes";
+import {
+  BackgroundColor,
+  HoverBackgroundColor,
+  HoverTextColor,
+  Size,
+  TextColor,
+  Variant,
+} from "../utils/commonFunctions/commonTypes";
 import handleValidation from "../utils/commonFunctions/validation";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -13,7 +20,7 @@ const SignIn = () => {
     value: "",
     error: "",
   };
-  const router= useRouter();
+  const router = useRouter();
   const [email, setEmail] = useState(initialState);
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement>,
@@ -24,7 +31,9 @@ const SignIn = () => {
     const error = handleValidation(value, name);
     setValue({ value, error });
   };
-  const fontsize = ctl(`text-10xl leading-11 md:text-11xl md:leading-[30px] lg:text-12xl lg:leading-12`);
+  const fontsize = ctl(
+    `text-10xl leading-11 md:text-11xl md:leading-[30px] lg:text-12xl lg:leading-12`
+  );
   return (
     <div>
       {/* header */}
@@ -45,7 +54,7 @@ const SignIn = () => {
             type="text"
             label="Email or Number"
             error={email?.error}
-            value={email.error}
+            value={email.value}
             placeholder="Email or Number"
             handleChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               handleChange(e, "email", setEmail)
