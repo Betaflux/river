@@ -7,6 +7,11 @@
     @apply py-[100px] lg:py-[200px];
   }
 }
+@layer components {
+  .padding-left-right {
+    @apply px-5 lg:px-10;
+  }
+}
 
 @font-face {
   font-family: "manukaThin";
