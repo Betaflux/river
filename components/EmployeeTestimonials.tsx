@@ -1,8 +1,8 @@
-import Link from 'next/link';
-import React from 'react'
-import CommonImage from '../commonComponents/CommonImage';
+import Link from "next/link";
+import React from "react";
+import CommonImage from "../commonComponents/CommonImage";
 
-const EmployeeTestimonials = ({careersData}:any) => {
+const EmployeeTestimonials = ({ careersData }: any) => {
   return (
     <section className="padding-top-bottom padding-left-right flex flex-col md:flex-row lg:flex-col">
       <div className="w-1/3 md:w-1/3 lg:w-full">
@@ -53,6 +53,6 @@ const EmployeeTestimonials = ({careersData}:any) => {
       </div>
     </section>
   );
-}
+};
 
 export default EmployeeTestimonials;

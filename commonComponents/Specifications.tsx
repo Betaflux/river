@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-export interface ISpecifications{
-  title:string;
-  desc:string;
+export interface ISpecifications {
+  title: string;
+  desc: string;
 }
 
-const Specifications = ({title,desc}:ISpecifications) => {
+const Specifications = ({ title, desc }: ISpecifications) => {
   return (
     <div className="text-blue-86">
       <div className="border-b-1 border-blue-86  pb-5">
@@ -18,6 +18,6 @@ const Specifications = ({title,desc}:ISpecifications) => {
       </div>
     </div>
   );
-}
+};
 
 export default Specifications;

@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Button from "../commonComponents/Button";
 import {
   BackgroundColor,
@@ -22,17 +22,24 @@ const navItems = [
 const Header = () => {
   const router = useRouter();
   const [goingUp, setGoingUp] = useState(false);
-  const handleScroll = () => {
+
+  const handleScroll = useCallback(() => {
     if (window.scrollY >= 105) {
       setGoingUp(true);
       console.log(goingUp);
     } else {
       setGoingUp(false);
     }
-  };
+  }, [goingUp]);
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-  }, []);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [handleScroll]);
+
   return (
     <>
       {!goingUp && (

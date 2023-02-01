@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
 
-interface IClaimCards{
-  title?:string;
-  subtitle?:string;
-  description?:string;
-  outro?:string;
+interface IClaimCards {
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  outro?: string;
 }
 
-const ClaimCards = ({title,subtitle,description,outro}:IClaimCards) => {
+const ClaimCards = ({ title, subtitle, description, outro }: IClaimCards) => {
   return (
     <div>
       {title && (
@@ -32,6 +32,6 @@ const ClaimCards = ({title,subtitle,description,outro}:IClaimCards) => {
       )}
     </div>
   );
-}
+};
 
 export default ClaimCards;

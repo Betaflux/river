@@ -118,5 +118,5 @@ export enum HoverTextColor {
 export enum Size {
   small = "small",
   medium = "medium",
-  large="large"
+  large = "large",
 }

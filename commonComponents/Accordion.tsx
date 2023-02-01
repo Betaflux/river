@@ -10,7 +10,7 @@ export interface IAccordion {
   color: string;
   itemIndex: number;
   isOpen: boolean;
-  imageUrl?:string;
+  imageUrl?: string;
   toggleHandler: (index: number) => void;
 }
 
@@ -21,7 +21,7 @@ const Accordion = ({
   isOpen,
   itemIndex,
   toggleHandler,
-  imageUrl
+  imageUrl,
 }: IAccordion) => {
   return (
     <details className={`${color} mt-5`}>

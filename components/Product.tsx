@@ -144,7 +144,7 @@ const accessoriesData = [
     image: "/images/product/mobileholder.png",
     title: "Mobile holder",
     paragraph: "hort description in a sentence or two at most.",
-  }
+  },
 ];
 const specificationData = [
   { title: "Range", desc: "132 kilometers per charge" },

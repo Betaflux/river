@@ -1,9 +1,7 @@
-import Product from '../../components/Product';
+import Product from "../../components/Product";
 
 const index = () => {
-  return (
-      <Product/>
-  )
-}
+  return <Product />;
+};
 
 export default index;

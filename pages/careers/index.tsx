@@ -2,7 +2,7 @@ import React from "react";
 import Careers from "../../components/Careers";
 import { getCareersData } from "../../http";
 
-const index = ({ careersData }:any) => {
+const index = ({ careersData }: any) => {
   return (
     <div>
       <Careers careersData={careersData} />
