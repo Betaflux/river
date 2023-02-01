@@ -2,18 +2,18 @@ import React from "react";
 import Image from "next/image";
 import { TextColor } from "../utils/commonFunctions/commonTypes";
 
-export interface IClaimCard {
+export interface IFeatureCard {
   url: string;
   title?: string;
   description?: string;
   color?: TextColor;
 }
-const ClaimCard = ({
+const FeatureCard = ({
   url,
   title,
   description,
   color = TextColor["blue-37"],
-}: IClaimCard) => {
+}: IFeatureCard) => {
   return (
     <article className="w-full">
       {/* image */}
@@ -43,4 +43,4 @@ const ClaimCard = ({
   );
 };
 
-export default ClaimCard;
+export default FeatureCard;

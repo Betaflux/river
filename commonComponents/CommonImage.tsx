@@ -15,7 +15,7 @@ const CommonImage = ({ alt, smallImage, largeImage }: ICommonImage) => {
           fill
           alt={alt}
           quality={100}
-          className="relative w-full h-full"
+          className="relative w-full h-full "
         />
       </div>
       <div className="hidden md:flex">

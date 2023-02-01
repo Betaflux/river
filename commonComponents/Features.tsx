@@ -4,12 +4,12 @@ import {
   TextColor,
 } from "../utils/commonFunctions/commonTypes";
 import Accordion from "./Accordion";
-import ClaimCard, { IClaimCard } from "./ClaimCard";
+import FeatureCard, { IFeatureCard } from "./FeatureCard";
 
 interface IFeatures {
   feature: string;
   title: string;
-  claimCards: IClaimCard[];
+  claimCards: IFeatureCard[];
   textColor: TextColor;
   backgroundColor?: BackgroundColor;
 }
@@ -45,7 +45,7 @@ const Features = ({
       <div className="md:hidden w-full grid grid-cols-1 gap-y-[70px] lg:w-2/3 lg:grid-cols-2 lg:gap-x-[20px] lg:gap-y-[65px] lg:ml-[60px]">
         {claimCards?.slice(0, 3).map((cards) => {
           return (
-            <ClaimCard
+            <FeatureCard
               key={cards.url}
               url={cards.url}
               title={cards.title}
@@ -76,7 +76,7 @@ const Features = ({
       <div className="hidden w-full md:grid grid-cols-1 gap-y-[70px] lg:w-2/3 md:grid-cols-2 md:gap-x-[20px] md:gap-y-[65px] lg:ml-[60px]">
         {claimCards?.map((cards) => {
           return (
-            <ClaimCard
+            <FeatureCard
               key={cards.url}
               url={cards.url}
               title={cards.title}

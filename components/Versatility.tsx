@@ -1,15 +1,15 @@
 import React from "react";
-import ClaimCard from "../commonComponents/ClaimCard";
+import FeatureCard from "../commonComponents/FeatureCard";
 
-interface ClaimCardValues {
+interface FeatureCardValues {
   url: string;
   title: string;
   description: string;
 }
-interface IClaimCards {
-  claimCards: ClaimCardValues[];
+interface IFeatureCards {
+  claimCards: FeatureCardValues[];
 }
-const Versatility = ({ claimCards }: IClaimCards) => {
+const Versatility = ({ claimCards }: IFeatureCards) => {
   return (
     <section className="w-full  px-5 bg-blue-86 lg:px-10 flex flex-col lg:flex-row padding-top-bottom">
       {/* Title */}
@@ -28,7 +28,7 @@ const Versatility = ({ claimCards }: IClaimCards) => {
       <div className="w-full grid grid-cols-1 gap-y-[45px] lg:w-2/3 md:grid-cols-2 md:gap-x-[20px] md:gap-y-[65px] lg:ml-[60px]">
         {claimCards?.map((cards) => {
           return (
-            <ClaimCard
+            <FeatureCard
               key={cards.title}
               url={cards?.url}
               title={cards?.title}
