@@ -32,7 +32,7 @@ const CommonHero = ({
           fill
           quality={100}
           alt="headerLogo"
-          className="relative w-full h-screen object-contain"
+          className="relative w-full h-screen"
         />
       </div>
       <div className="lg:hidden">
